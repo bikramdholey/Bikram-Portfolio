@@ -1,0 +1,63 @@
+﻿# ============================
+# JEKYLL IGNORE CONFIGURATION
+# ============================
+
+# 🧱 Development & build tools
+node_modules/
+vendor/
+Gemfile
+Gemfile.lock
+package.json
+package-lock.json
+docker-compose.yml
+docker-compose-slim.yml
+Dockerfile
+README.md
+INSTALL.md
+CUSTOMIZE.md
+CONTRIBUTING.md
+FAQ.md
+
+# 🧩 GitHub & workflow configs
+.github/
+.devcontainer/
+.prettierrc
+.pre-commit-config.yaml
+.prettierignore
+
+# 🧠 Python / Notebooks / Scripts
+notebooks/
+scripts/
+_scripts/
+*.ipynb
+*.py
+__pycache__/
+
+# 🖼️ Asset sources (compiled elsewhere)
+assets/css/main.scss
+assets/js/distillpub/template.v2.js
+assets/js/search/*.js
+assets/plotly/demo.html
+assets/json/*.json
+assets/**/*.map
+assets/**/*.min.js
+assets/**/*.min.css
+
+# 🧾 Sass partials and icons (compiled to main.css)
+_sass/font-awesome/
+_sass/tabler-icons/
+_sass/.ipynb_checkpoints/
+
+# 📄 Draft posts, test markdown
+_posts/2015-10-20-math.md
+drafts/
+tests/
+
+# 💡 Lighthouse and other reports
+lighthouse_results/
+
+# 🔒 Temporary / OS files
+.DS_Store
+Thumbs.db
+*.log
+*.tmp

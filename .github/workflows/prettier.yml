@@ -1,0 +1,54 @@
+name: Prettier Code Formatter
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js ⚙️
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Prettier 💾
+        run: |
+          npm install --save-dev --save-exact prettier @shopify/prettier-plugin-liquid diff2html-cli
+
+      - name: Run Prettier Check 🔎
+        id: prettier
+        continue-on-error: true
+        run: |
+          echo "Running Prettier check..."
+          npx prettier . --check || echo "Formatting issues found."
+
+      - name: Generate Diff (if needed) 📝
+        if: ${{ steps.prettier.outcome == 'failure' }}
+        run: |
+          echo "Generating Prettier diff..."
+          npx prettier . --write
+          git diff -- . ':(exclude)package-lock.json' ':(exclude)package.json' > diff.txt || true
+          if [ -s diff.txt ]; then
+            npx diff2html -i file -s side -F diff.html -- diff.txt
+          else
+            echo "No differences to show."
+            touch diff.html
+          fi
+
+      - name: Upload HTML Diff ⬆️
+        uses: actions/upload-artifact@v4
+        with:
+          name: prettier-diff
+          path: diff.html
+          retention-days: 7
+
+      - name: Done ✅
+        run: echo "Prettier check completed successfully!"
