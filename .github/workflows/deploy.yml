@@ -9,32 +9,60 @@ on:
       - "assets/**"
       - "_sass/**"
       - "_scripts/**"
-      - "**.bib"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
+      - "**/*.bib"
+      - "**/*.html"
+      - "**/*.js"
+      - "**/*.liquid"
       - "**/*.md"
-      - "**.yml"
+      - "**/*.yml"
       - "Gemfile"
       - "Gemfile.lock"
-      - "!.github/workflows/axe.yml"
-      - "!.github/workflows/broken-links.yml"
-      - "!.github/workflows/deploy-docker-tag.yml"
-      - "!.github/workflows/deploy-image.yml"
-      - "!.github/workflows/docker-slim.yml"
-      - "!.github/workflows/lighthouse-badger.yml"
-      - "!.github/workflows/prettier.yml"
-      - "!lighthouse_results/**"
-      - "!CONTRIBUTING.md"
-      - "!CUSTOMIZE.md"
-      - "!FAQ.md"
-      - "!INSTALL.md"
-      - "!README.md"
+    paths-ignore:
+      - ".github/workflows/axe.yml"
+      - ".github/workflows/broken-links.yml"
+      - ".github/workflows/deploy-docker-tag.yml"
+      - ".github/workflows/deploy-image.yml"
+      - ".github/workflows/docker-slim.yml"
+      - ".github/workflows/lighthouse-badger.yml"
+      - ".github/workflows/prettier.yml"
+      - "lighthouse_results/**"
+      - "CONTRIBUTING.md"
+      - "CUSTOMIZE.md"
+      - "FAQ.md"
+      - "INSTALL.md"
+      - "README.md"
+
   pull_request:
     branches:
       - master
       - main
-    paths: *same-as-above
+    paths:
+      - "assets/**"
+      - "_sass/**"
+      - "_scripts/**"
+      - "**/*.bib"
+      - "**/*.html"
+      - "**/*.js"
+      - "**/*.liquid"
+      - "**/*.md"
+      - "**/*.yml"
+      - "Gemfile"
+      - "Gemfile.lock"
+    paths-ignore:
+      - ".github/workflows/axe.yml"
+      - ".github/workflows/broken-links.yml"
+      - ".github/workflows/deploy-docker-tag.yml"
+      - ".github/workflows/deploy-image.yml"
+      - ".github/workflows/docker-slim.yml"
+      - ".github/workflows/lighthouse-badger.yml"
+      - ".github/workflows/prettier.yml"
+      - "lighthouse_results/**"
+      - "CONTRIBUTING.md"
+      - "CUSTOMIZE.md"
+      - "FAQ.md"
+      - "INSTALL.md"
+      - "README.md"
+
   workflow_dispatch:
 
 permissions:
@@ -59,12 +87,6 @@ jobs:
           python-version: "3.13"
           cache: "pip"
 
-      - name: Setup Node.js ✅
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"      # pick a stable LTS you want
-          cache: "npm"
-
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
@@ -73,29 +95,17 @@ jobs:
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
 
-      - name: Install system deps (ImageMagick) 🔧
+      - name: Install and Build 🔧
         run: |
-          sudo apt-get update
-          sudo apt-get install -y imagemagick
-
-      - name: Install JS deps (if package.json exists)
-        run: |
-          if [ -f package.json ]; then npm ci; fi
-
-      - name: Install and Build Jekyll 🔧
-        run: |
-          pip3 install --upgrade nbconvert || true
+          sudo apt-get update && sudo apt-get install -y imagemagick
+          pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
-          bundle exec jekyll build --verbose
+          bundle exec jekyll build
 
       - name: Purge unused CSS 🧹
         run: |
-          # Use npx so you don't rely on global installs. Adjust args to match your config.
-          if [ -f package.json ]; then
-            npx purgecss -c purgecss.config.js
-          else
-            npx purgecss -c purgecss.config.js || true
-          fi
+          npm install -g purgecss
+          purgecss -c purgecss.config.js
 
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
