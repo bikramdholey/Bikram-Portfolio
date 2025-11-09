@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /Teaching/
+permalink: /teaching/
 title: Teaching
 description: Summary of my academic teaching experience at Brainware University.
 nav: true
