@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://bikramdholey.github.io/Bikram-Portfolio/sitemap.xml
+Sitemap: https://dainty-daffodil-d541e8.netlify.app/sitemap.xml

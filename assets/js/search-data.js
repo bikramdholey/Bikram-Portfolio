@@ -7,55 +7,55 @@ ninja.data = [{
     title: "About",
     section: "Navigation",
     handler: () => {
-      window.location.href = "/Bikram-Portfolio/";
+      window.location.href = "/";
     },
-  },{id: "nav-publications",
-          title: "Publications",
-          description: "Published research papers and featured visuals.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/Bikram-Portfolio/publications/";
-          },
-        },{id: "nav-projects",
+  },{id: "nav-projects",
           title: "Projects",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/Bikram-Portfolio/projects/";
+            window.location.href = "/projects/";
           },
         },{id: "nav-contact",
           title: "Contact",
           description: "Contact details of Bikram Dholey — Research Scholar in Mathematics, Jadavpur University.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/Bikram-Portfolio/contact/";
+            window.location.href = "/contact/";
           },
         },{id: "nav-cv",
           title: "cv",
           description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/Bikram-Portfolio/cv/";
-          },
-        },{id: "nav-memories",
-          title: "Memories",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/Bikram-Portfolio/memories/";
+            window.location.href = "/cv/";
           },
         },{id: "nav-teaching",
           title: "Teaching",
           description: "Summary of my academic teaching experience at Brainware University.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/Bikram-Portfolio/teaching/";
+            window.location.href = "/teaching/";
+          },
+        },{id: "nav-memories",
+          title: "Memories",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/memories/";
+          },
+        },{id: "nav-publications",
+          title: "Publications",
+          description: "Published research papers and featured visuals.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
           },
         },{id: "projects-morse-theory",
           title: 'Morse Theory',
           description: "A tool to study the topological structure of smooth manifolds.",
           section: "Projects",handler: () => {
-              window.location.href = "/Bikram-Portfolio/projects/Morse-theory/";
+              window.location.href = "/projects/Morse-theory/";
             },},{
         id: 'social-',
         title: '',
