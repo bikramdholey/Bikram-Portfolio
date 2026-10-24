@@ -1,0 +1,81 @@
+name: Sync CV from Overleaf
+
+# Pulls the CV from Overleaf, compiles the PDF and regenerates the site data
+# (_data/overleaf_cv.json, _data/cv.json) that the About, Publications and CV
+# pages render. Needs the repository secret OVERLEAF_GIT_TOKEN
+# (Overleaf -> Account Settings -> Git integration -> Generate token).
+
+on:
+  schedule:
+    - cron: "17 */3 * * *" # every 3 hours
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Rebuild even if the Overleaf project has not changed"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-cv-from-overleaf
+  cancel-in-progress: false
+
+env:
+  OVERLEAF_PROJECT_ID: 678b755bfc634d68be9d9404
+  CV_TEX_FILE: resume_Sanyam.tex
+  CV_PDF_PATH: assets/pdf/Bikram_Dholey_CV.pdf
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch CV from Overleaf
+        id: overleaf
+        env:
+          OVERLEAF_GIT_TOKEN: ${{ secrets.OVERLEAF_GIT_TOKEN }}
+        run: |
+          if [ -z "$OVERLEAF_GIT_TOKEN" ]; then
+            echo "::error::Repository secret OVERLEAF_GIT_TOKEN is not set."
+            exit 1
+          fi
+          git clone --depth 1 "https://git:${OVERLEAF_GIT_TOKEN}@git.overleaf.com/${OVERLEAF_PROJECT_ID}" overleaf-src
+          sha=$(git -C overleaf-src rev-parse HEAD)
+          last=$(python3 -c "import json; print(json.load(open('_data/overleaf_cv.json')).get('source_commit', ''))" 2>/dev/null || true)
+          echo "sha=$sha" >> "$GITHUB_OUTPUT"
+          if [ "$sha" = "$last" ] && [ "${{ inputs.force }}" != "true" ]; then
+            echo "Overleaf project unchanged ($sha); nothing to do."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Compile CV PDF
+        if: steps.overleaf.outputs.changed == 'true'
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: overleaf-src
+          root_file: ${{ env.CV_TEX_FILE }}
+
+      - name: Update site data
+        if: steps.overleaf.outputs.changed == 'true'
+        run: |
+          cp "overleaf-src/${CV_TEX_FILE%.tex}.pdf" "$CV_PDF_PATH"
+          python3 _scripts/overleaf_cv_sync.py "overleaf-src/$CV_TEX_FILE" --commit "${{ steps.overleaf.outputs.sha }}"
+
+      - name: Commit and push
+        if: steps.overleaf.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _data/overleaf_cv.json _data/cv.json "$CV_PDF_PATH"
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Sync CV from Overleaf (${{ steps.overleaf.outputs.sha }})"
+            git push
+          fi

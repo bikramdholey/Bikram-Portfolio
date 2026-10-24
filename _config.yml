@@ -19,8 +19,8 @@ keywords: jekyll, jekyll-theme, academic-website, portfolio-website
 lang: en
 icon: ⚛️
 
-url: "https://bikramdholey.github.io"
-baseurl: "/Bikram-Portfolio"
+baseurl: ""
+url: "https://dainty-daffodil-d541e8.netlify.app"
 last_updated: false
 back_to_top: true
 
@@ -75,7 +75,8 @@ blog_description: a simple whitespace theme for academics
 permalink: /blog/:year/:title/
 lsi: false
 pagination:
-  enabled: true
+  enabled: false
+jekyll_get_json: []
 related_blog_posts:
   enabled: true
   max_related: 5
@@ -188,6 +189,8 @@ gems:
 
 sass:
   style: compressed
+  quiet_deps: true
+  silence_deprecations: [import, global-builtin, color-functions]
 
 # ---------------------------------------------------------------------------
 # Jekyll Minifier

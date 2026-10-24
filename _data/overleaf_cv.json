@@ -1,0 +1,625 @@
+{
+  "profile": {
+    "name": "Bikram Dholey",
+    "label": "Research Scholer",
+    "affiliation": "Jadavpur University, Kolkata",
+    "email": "bikram.dholey.563412@gmail.com",
+    "phone": "+91 9874795937"
+  },
+  "objective": [
+    "I would want to work in a dedicated professional atmosphere where I can use my knowledge and talents to assist the business to flourish while also improving myself.",
+    "Aspiring for a rewarding teaching and research post in a recognized Institute/University/College in India/Abroad.",
+    "I am excited to interact with and mentor students in order to gain a variety of information and skills in both research and teaching.",
+    "To contribute effectively to the academic community by publishing important research and promote multidisciplinary cooperation.",
+    "To keep informed with evolving trends in mathematics and implement creative ways in instruction and research.",
+    "To foster critical thinking, creativity, and analytical abilities among students through effective teaching approaches.",
+    "To contribute to curriculum creation, student assistance, and academic activities that enhance institutional standards.",
+    "To leverage my analytical mentality and quantitative abilities in addressing real-world scientific and engineering challenges."
+  ],
+  "education": [
+    {
+      "degree": "Ph.D. in Mathematics",
+      "institution": "Jadavpur University",
+      "year": "2025–Present",
+      "score": ""
+    },
+    {
+      "degree": "Bachelor of Education (B.Ed.)",
+      "institution": "Bhaktabala B.Ed. College",
+      "year": "2022–24",
+      "score": "8.35"
+    },
+    {
+      "degree": "Master of Science",
+      "institution": "Ramakrishna Mission Vivekananda Centenary College",
+      "year": "2020–22",
+      "score": "9.57"
+    },
+    {
+      "degree": "Bachelor of Science (H)",
+      "institution": "Acharya Jagadish Chandra Bose College",
+      "year": "2017–20",
+      "score": "74"
+    },
+    {
+      "degree": "Intermediate/+2",
+      "institution": "Tarakeswar Mahavidyalaya",
+      "year": "2016",
+      "score": "79"
+    },
+    {
+      "degree": "High School",
+      "institution": "Soaluk Azad High School",
+      "year": "2014",
+      "score": "87"
+    }
+  ],
+  "journal_articles": [
+    {
+      "title": "Influence of initial stress and interfacial stiffness on torsional wave dynamics in metamaterial waveguides embedded in porous medium",
+      "venue": "Mechanics Research Communications",
+      "year": "2026",
+      "indexing": [
+        "SCIE"
+      ],
+      "impact_factor": "2.6",
+      "quartile": "Q2",
+      "isbn": "",
+      "publisher": "",
+      "url": "https://doi.org/10.1016/j.mechrescom.2026.104813"
+    },
+    {
+      "title": "Analytical modelling and simulation of reverse magnetic response in cylindrical wave with strain gradient interfaces",
+      "venue": "Applied Mathematical Modelling",
+      "year": "2026",
+      "indexing": [
+        "SCIE"
+      ],
+      "impact_factor": "5.5",
+      "quartile": "Q1",
+      "isbn": "",
+      "publisher": "",
+      "url": "https://doi.org/10.1016/j.apm.2026.117229"
+    },
+    {
+      "title": "A new approach to interfacial material effects on plane wave reflection–transmission in PZT-5A–epoxy composite structure",
+      "venue": "Journal of Vibration and Control",
+      "year": "2026",
+      "indexing": [
+        "SCIE"
+      ],
+      "impact_factor": "2.4",
+      "quartile": "Q2",
+      "isbn": "",
+      "publisher": "",
+      "url": "https://doi.org/10.1177/10775463261476141"
+    },
+    {
+      "title": "Analytical modeling of SH-waves in functionally graded orthotropic–piezoelectric cylindrical waveguides with electromechanically coupled interfaces",
+      "venue": "Journal of Engineering Mathematics",
+      "year": "2026",
+      "indexing": [
+        "SCIE"
+      ],
+      "impact_factor": "2.0",
+      "quartile": "Q2",
+      "isbn": "",
+      "publisher": "",
+      "url": "https://doi.org/10.1007/s10665-026-10543-1"
+    },
+    {
+      "title": "Shear Horizontal Wave Dynamics in a Micromechanical Piezoelectric Fiber-Reinforced Composite Substrate Loaded with Complex Fluid",
+      "venue": "ZAMM – Journal of Applied Mathematics and Mechanics",
+      "year": "2026",
+      "indexing": [
+        "SCIE"
+      ],
+      "impact_factor": "3.2",
+      "quartile": "Q2",
+      "isbn": "",
+      "publisher": "",
+      "url": "https://doi.org/10.1002/zamm.70517"
+    },
+    {
+      "title": "Size-Dependent DPL Model for Thermoelastic Damping in Piezothermoelastic Fiber-Reinforced Resonator",
+      "venue": "Continuum Mechanics and Thermodynamics",
+      "year": "2026",
+      "indexing": [
+        "SCIE"
+      ],
+      "impact_factor": "3.0",
+      "quartile": "Q2",
+      "isbn": "",
+      "publisher": "",
+      "url": "https://doi.org/10.1007/s00161-026-01506-z"
+    },
+    {
+      "title": "Size-dependent interfacial elasticity effects on SH wave propagation in cylindrical structures",
+      "venue": "Physica Scripta",
+      "year": "2026",
+      "indexing": [
+        "SCIE"
+      ],
+      "impact_factor": "2.6",
+      "quartile": "Q2",
+      "isbn": "",
+      "publisher": "",
+      "url": "https://doi.org/10.1088/1402-4896/ae7d70"
+    },
+    {
+      "title": "Electromechanical coupling interaction of shear-horizontal waves in piezoelectric semiconductor layered structures with electrically tunable interfaces",
+      "venue": "European Journal of Mechanics – A/Solids",
+      "year": "2026",
+      "indexing": [
+        "SCIE"
+      ],
+      "impact_factor": "4.7",
+      "quartile": "Q1",
+      "isbn": "",
+      "publisher": "",
+      "url": "https://doi.org/10.1016/j.euromechsol.2026.106222"
+    },
+    {
+      "title": "Novel SH-wave Propagation Modeling in Fluid-Loaded Piezoelectric Viscoelastic Fiber-Reinforced Composites",
+      "venue": "Mechanics Based Design of Structures and Machines",
+      "year": "2026",
+      "indexing": [
+        "SCIE"
+      ],
+      "impact_factor": "3.7",
+      "quartile": "Q2",
+      "isbn": "",
+      "publisher": "",
+      "url": "https://doi.org/10.1080/15397734.2026.2663341"
+    },
+    {
+      "title": "Influence of Dual Electric Membranes Pairing with a Sandwiched Electrically Induced Spring Interface on SH-Wave Propagation in Smart Porous Composite",
+      "venue": "Journal of Vibration Engineering & Technologies",
+      "year": "2026",
+      "indexing": [
+        "SCIE"
+      ],
+      "impact_factor": "3.5",
+      "quartile": "Q1",
+      "isbn": "",
+      "publisher": "",
+      "url": "https://doi.org/10.1007/s42417-026-02411-0"
+    },
+    {
+      "title": "Data-Driven Modeling of Love Wave Dynamics in Piezoelectric Fiber-Reinforced Structure Using Machine Learning",
+      "venue": "Journal of Computer Science",
+      "year": "2026",
+      "indexing": [
+        "Scopus"
+      ],
+      "impact_factor": "",
+      "quartile": "",
+      "isbn": "",
+      "publisher": "",
+      "url": "https://computersciencejournal.org/wp-content/uploads/14-2.pdf"
+    },
+    {
+      "title": "Influence of Interfacial Stiffness and Density on Love-Type Wave Propagation in a Fiber-Reinforced and Fiber-Piezoelectric Layered Medium",
+      "venue": "International Journal of Applied Mechanics",
+      "year": "2026",
+      "indexing": [
+        "SCIE"
+      ],
+      "impact_factor": "2.3",
+      "quartile": "Q2",
+      "isbn": "",
+      "publisher": "",
+      "url": "https://doi.org/10.1142/S1758825126500080"
+    },
+    {
+      "title": "Analysis of Cylindrical Membrane Effects on Shear-Horizontal Wave Propagation in PFRC Core–Shell Structures",
+      "venue": "Mathematical Methods in the Applied Sciences",
+      "year": "2026",
+      "indexing": [
+        "SCIE"
+      ],
+      "impact_factor": "1.8",
+      "quartile": "Q1",
+      "isbn": "",
+      "publisher": "",
+      "url": "https://doi.org/10.1002/mma.70496"
+    },
+    {
+      "title": "Dynamic Characteristics of Shear-Horizontal Waves in Porous Sandwich Systems",
+      "venue": "Applied Mathematical Biosystems",
+      "year": "2025",
+      "indexing": [],
+      "impact_factor": "",
+      "quartile": "",
+      "isbn": "",
+      "publisher": "",
+      "url": "https://ambjournal.com"
+    },
+    {
+      "title": "Shear-Horizontal Wave Dynamics in Smart Fiber Composites with Layerwise Interfacial Imperfections",
+      "venue": "Boletim da Sociedade Paranaense de Matemática",
+      "year": "2025",
+      "indexing": [
+        "Scopus"
+      ],
+      "impact_factor": "",
+      "quartile": "",
+      "isbn": "",
+      "publisher": "",
+      "url": "https://doi.org/10.5269/bspm.77807"
+    },
+    {
+      "title": "The Influence of SH-wave Propagation in a Tri-layered Composite Structure with Interfacial Imperfections",
+      "venue": "Journal of Vibration Engineering & Technologies",
+      "year": "2025",
+      "indexing": [
+        "SCIE"
+      ],
+      "impact_factor": "2.4",
+      "quartile": "Q2",
+      "isbn": "",
+      "publisher": "",
+      "url": "https://doi.org/10.1007/s42417-025-01776-y"
+    }
+  ],
+  "book_chapters": [
+    {
+      "title": "Shear-Horizontal Wave Propagation in Piezoelectric Cylindrical Structure with Imperfect Interface",
+      "venue": "Proceedings of Innovations in Mathematics: An International Conference on Research and Applications",
+      "year": "2026",
+      "indexing": [],
+      "impact_factor": "",
+      "quartile": "",
+      "isbn": "978-93-7837-042-7",
+      "publisher": "Book Rivers",
+      "url": ""
+    },
+    {
+      "title": "Modeling Dispersive Characteristics of Love Waves in Fiber-reinforced Composite Structure",
+      "venue": "Contemporary Explorations in Multidisciplinary Sciences",
+      "year": "2025",
+      "indexing": [],
+      "impact_factor": "",
+      "quartile": "",
+      "isbn": "978-93-48301-03-1",
+      "publisher": "Unika Prakashan",
+      "url": ""
+    }
+  ],
+  "research_other": [
+    {
+      "title": "Supervision of MSc Projects",
+      "items": [
+        "Brainware University · 2023 · Guided Marjita Goswami through all stages of her project on “Morse Theory”."
+      ]
+    }
+  ],
+  "conferences": [
+    {
+      "title": "Smart Control of SH-Wave Propagation in Piezoelectric–Semiconductor/Magneto–Electro–Elastic System",
+      "event": "8th Regional Science and Technology Congress (Region-4), 2025–26, jointly organized by University of Kalyani and Department of Science and Technology and Biotechnology, Government of West Bengal",
+      "type": "Paper Presentation",
+      "date": "Jan. 2026"
+    },
+    {
+      "title": "Shear-Horizontal Wave Dynamics in Dual-Porous Sandwich System",
+      "event": "Frontiers in Mathematical Sciences: Theory, Applications and Innovations (FMSTAI-2025), Department of Mathematics, University of North Bengal, in association with Calcutta Mathematical Society",
+      "type": "Paper Presentation",
+      "date": "Dec. 2025"
+    },
+    {
+      "title": "SH-Wave Dynamics and Sensitivity in a Fluid–PFRC System with Two-Layer Membranes",
+      "event": "National Seminar on Logic and Swarm Robotics (NSLSR-2025), Department of Mathematics, Gour Mahavidyalaya, Mangalbari, Malda",
+      "type": "Paper Presentation, Hybrid Mode",
+      "date": "Dec. 2025"
+    },
+    {
+      "title": "SH-Wave Propagation in Smart Porous Composites with Electromechanical Imperfect Interface",
+      "event": "Two-Day National Seminar on Trends in Mathematics and its Application–2025 (TMA-2025), Department of Mathematics, Barasat Government College",
+      "type": "Paper Presentation",
+      "date": "Nov. 2025"
+    },
+    {
+      "title": "Influence of Interfacial Piezo-Membrane on Shear Horizontal Wave Dynamics in a Complex Fluid–Piezoelectric Configuration",
+      "event": "International Conference on Frontiers in Science: An Integrative Approach in Solving Global Challenges (ICFS-2025), Krishnagar Government College",
+      "type": "Paper Presentation",
+      "date": "Sept. 2025"
+    },
+    {
+      "title": "Modeling SH-Wave Dynamics in Piezoelectric Semiconductor–Composite Systems",
+      "event": "One-Day Prof. M. R. Gupta Memorial National Seminar on Nonlinear and Complex Phenomena, Centre for Plasma Studies (CPS), Jadavpur University, in collaboration with Advanced Centre for Nonlinear and Complex Phenomena (ACNCP)",
+      "type": "Paper Presentation",
+      "date": "Aug. 2025"
+    },
+    {
+      "title": "Shear Horizontal Wave Dynamics in Smart Porous– Piezoelectric Systems with Electrically Induced Coupled Spring-Type Interface",
+      "event": "2nd International Conference on Mathematical Analysis and Applications (MAA-2025), National Institute of Technology Jamshedpur",
+      "type": "Paper Presentation",
+      "date": "August 2025"
+    },
+    {
+      "title": "Love Wave Propagation in Fiber-Reinforced Composites with Interfacial Membrane Effects",
+      "event": "National Conference on Mathematics and its Applications (NCMA-2025), Department of Mathematics, University of North Bengal",
+      "type": "Paper Presentation",
+      "date": "July 2025"
+    },
+    {
+      "title": "Shear-horizontal wave dynamics in smart fiber composites with layerwise interfacial imperfections",
+      "event": "Global Assembly for Mathematical Modeling and Analysis (GAMMA)-2025, The ICFAI University Tripura",
+      "type": "Paper Presentation",
+      "date": "June. 2025"
+    }
+  ],
+  "seminars": [
+    {
+      "title": "Short Term Course on Mathematical Aspects of Elastodynamics & Applications",
+      "event": "IIT (ISM) Dhanbad",
+      "type": "Short Term Course / Workshop",
+      "date": "December, 2025"
+    },
+    {
+      "title": "Trends in Mathematics and its Application–2025",
+      "event": "Barasat Government College",
+      "type": "Two-Day National Seminar",
+      "date": "November, 2025"
+    },
+    {
+      "title": "Logic and Swarm Robotics (NSLSR-2025)",
+      "event": "Gour Mahavidyalaya, Malda",
+      "type": "National Seminar (Hybrid Mode)",
+      "date": "December, 2025"
+    },
+    {
+      "title": "Prof. M. R. Gupta Memorial National Seminar on Nonlinear and Complex Phenomena",
+      "event": "Jadavpur University, Kolkata",
+      "type": "One-Day National Seminar",
+      "date": "August, 2025"
+    },
+    {
+      "title": "Metric spaces",
+      "event": "Krishna Chandra College",
+      "type": "One week Web-Workshop",
+      "date": "March, 2021"
+    },
+    {
+      "title": "A National Webinar on Epidemiology and Mathematics",
+      "event": "Rahara ramkrishna mission Vivekananda centenary college",
+      "type": "One week Web-Workshop",
+      "date": "July, 2021"
+    },
+    {
+      "title": "Dynamical Systems in Cosmological Studies",
+      "event": "Krishna Chandra College",
+      "type": "International Webinar",
+      "date": "March, 2021"
+    },
+    {
+      "title": "Metric spaces",
+      "event": "Krishna Chandra College",
+      "type": "One week Web-Workshop",
+      "date": "March, 2021"
+    },
+    {
+      "title": "Electronic Waste: Problem, Management & Policies in India",
+      "event": "Acharya Jagadish Chandra Bose College",
+      "type": "Two - Day International Webinar",
+      "date": "August 2020"
+    },
+    {
+      "title": "Fighting COVID-19 through Mathematical Way",
+      "event": "Acharya Jagadish Chandra Bose College",
+      "type": "Two - Day International Webinar",
+      "date": "August 2020"
+    }
+  ],
+  "awards": [
+    {
+      "title": "M. R. Gupta Memorial Award",
+      "detail": "Prof. M. R. Gupta Memorial National Seminar on Nonlinear and Complex Phenomena 2026, Centre for Plasma Studies (CPS), Jadavpur University in collaboration with Advanced Centre for Nonlinear and Complex Phenomena.",
+      "date": "Aug. 2026",
+      "text": "M. R. Gupta Memorial Award at Prof. M. R. Gupta Memorial National Seminar on Nonlinear and Complex Phenomena 2026, Centre for Plasma Studies (CPS), Jadavpur University in collaboration with Advanced Centre for Nonlinear and Complex Phenomena."
+    },
+    {
+      "title": "Best Paper Presentation Award",
+      "detail": "Frontiers in Mathematical Sciences: Theory, Applications and Innovations (FMSTAI-2025), Department of Mathematics, University of North Bengal, in association with Calcutta Mathematical Society.",
+      "date": "Dec. 2025",
+      "text": "Best Paper Presentation Award at Frontiers in Mathematical Sciences: Theory, Applications and Innovations (FMSTAI-2025), Department of Mathematics, University of North Bengal, in association with Calcutta Mathematical Society."
+    },
+    {
+      "title": "CSIR-UGC NET",
+      "detail": "for Junior Research Fellowship (JRF) and Lectureship in Mathematical Sciences, with All India Rank: 159",
+      "date": "Dec. 2024",
+      "text": "CSIR-UGC NET for Junior Research Fellowship (JRF) and Lectureship in Mathematical Sciences, with All India Rank: 159"
+    },
+    {
+      "title": "Written Research Eligibility Test (WRET)",
+      "detail": "Qualified Written Research Eligibility Test (WRET), Jadavpur University – Mathematics Department",
+      "date": "Dec. 2024",
+      "text": "Qualified Written Research Eligibility Test (WRET), Jadavpur University – Mathematics Department"
+    },
+    {
+      "title": "SVMCM",
+      "detail": "Scholarship in B.Ed.",
+      "date": "2022",
+      "text": "SVMCM Scholarship in B.Ed."
+    },
+    {
+      "title": "SVMCM",
+      "detail": "Scholarship at PG level.",
+      "date": "2020",
+      "text": "SVMCM Scholarship at PG level."
+    },
+    {
+      "title": "SVMCM",
+      "detail": "Scholarship at UG level.",
+      "date": "2017",
+      "text": "SVMCM Scholarship at UG level."
+    },
+    {
+      "title": "NTSE",
+      "detail": "Scholarship at 12th levels.",
+      "date": "2017",
+      "text": "NTSE Scholarship at 12th levels."
+    },
+    {
+      "title": "NTSE",
+      "detail": "Scholarship at 8th level.",
+      "date": "2012",
+      "text": "NTSE Scholarship at 8th level."
+    }
+  ],
+  "work": [
+    {
+      "title": "Assistant Professor",
+      "organization": "Brainware University",
+      "date": "Sep’22-July'25",
+      "details": [
+        "Department of Mathematics",
+        "School of Computational & Applied Sciences",
+        "https://www.brainwareuniversity.ac.in/"
+      ]
+    }
+  ],
+  "plans": [
+    {
+      "title": "Teaching Plan",
+      "items": [
+        "Develop engaging lesson plans for undergraduate and graduate mathematics courses, incorporating interactive teaching methods, technology, and real-world applications.",
+        "Mentor students, supervise research projects and foster critical thinking. Design curricula, assess student progress, and contribute to academic program development.",
+        "Integrate interdisciplinary approaches and promote a collaborative learning environment"
+      ]
+    },
+    {
+      "title": "Research Plan",
+      "items": [
+        "Investigating wave propagation in smart materials through mathematical modeling and computational simulations.",
+        "Focus on dispersion analysis, nonlinear wave interactions, and metamaterials for advanced control.",
+        "Develop analytical and numerical techniques to optimize wave behavior in engineering applications, enhancing material performance in aerospace, biomedical, and structural systems."
+      ]
+    }
+  ],
+  "research_interests": [
+    "Solid Mechanics",
+    "Wave Propagation",
+    "Piezoelectricity",
+    "Elastodynamics",
+    "Vibrations",
+    "Smart Materials"
+  ],
+  "courses": [
+    {
+      "title": "Introduction to Abstract and Linear Algebra",
+      "kind": "FDP",
+      "organizer": "NPTL"
+    },
+    {
+      "title": "TEW in Analysis and Topology 2023",
+      "kind": "FDP",
+      "organizer": "ATM School"
+    },
+    {
+      "title": "Recent Trends in Biomathematics & Dynamical Systems",
+      "kind": "FDP",
+      "organizer": "Mahadevananda Mahavidyalaya"
+    },
+    {
+      "title": "Python 3.4.3",
+      "kind": "Training",
+      "organizer": "IIT Bombay"
+    },
+    {
+      "title": "LaTeX",
+      "kind": "Training",
+      "organizer": "IIT Bombay"
+    },
+    {
+      "title": "Number Theory & its Application",
+      "kind": "FDP",
+      "organizer": "Gates Institute of Technology"
+    }
+  ],
+  "projects": [
+    {
+      "text": "M.Sc. Project: “Morse Theory” - A tool to study topological structure of smooth manifold. · Satyabrota Kundu",
+      "date": "2020"
+    }
+  ],
+  "skills": [
+    {
+      "label": "Programming Languages",
+      "value": "Python, C"
+    },
+    {
+      "label": "Tools & Libraries",
+      "value": "Mathematica, Matlab, Matplotlib, LaTeX"
+    }
+  ],
+  "interests": [
+    "Differential Equations",
+    "Wave Propagation",
+    "Graph Theory",
+    "Complex Analysis",
+    "Manifold Theory"
+  ],
+  "extracurricular": [
+    "National Service Scheme",
+    "Sports"
+  ],
+  "web": [
+    {
+      "label": "Portfolio",
+      "value": "https://dainty-daffodil-d541e8.netlify.app/"
+    },
+    {
+      "label": "Email",
+      "value": "bikram.dholey.563412@gmail.com"
+    },
+    {
+      "label": "Research Gate",
+      "value": "https://www.researchgate.net/profile/Bikram-Dholey"
+    },
+    {
+      "label": "Orcid",
+      "value": "https://orcid.org/0009-0000-5362-6152"
+    },
+    {
+      "label": "Google Scholar",
+      "value": "https://scholar.google.co.in/citations?hl=en&user=D3Z_trYAAAAJ"
+    },
+    {
+      "label": "LinkedIn",
+      "value": "https://www.linkedin.com/in/bikram-dholey-6a67ba161/"
+    },
+    {
+      "label": "Scopus",
+      "value": "https://www.scopus.com/authid/detail.uri?authorId=59667688200"
+    },
+    {
+      "label": "Web of Science",
+      "value": "https://www.webofscience.com/wos/author/record/MYQ-6875-2025"
+    },
+    {
+      "label": "Vidwan",
+      "value": "https://vidwan.inflibnet.ac.in/profile/361592"
+    }
+  ],
+  "other_sections": [],
+  "section_order": [
+    "OBJECTIVE",
+    "ACADEMIC BACKGROUND",
+    "RESEARCH EXPERIENCE",
+    "CONFERENCE & SEMINAR PRESENTATIONS",
+    "SEMINARS & WORKSHOPS",
+    "SCHOLASTIC ACHIEVEMENTS",
+    "WORK EXPERIENCE",
+    "TEACHING AND RESEARCH PLAN",
+    "RESEARCH INTERESTS",
+    "RELEVANT COURSES/ TRAININGS",
+    "PROJECTS",
+    "SKILLS",
+    "INTERESTS",
+    "EXTRACURRICULAR ACTIVITIES",
+    "WEB ADDRESSES"
+  ],
+  "source_commit": ""
+}
