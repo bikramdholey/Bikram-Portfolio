@@ -15,19 +15,27 @@ nav_order: 87
     <p class="post-description">{{ site.data.site_text.publications_intro | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
   </header>
 
+  {% include tab_banner.liquid scene="publications" %}
+
   <hr>
 
-  <h2 class="section-title">🎓 Featured Research Animation</h2>
+  <h2 class="section-title">🔗 Research Profiles</h2>
 
-  <div class="image-box">
-    <img
-      src="{{ '/assets/img/publication_preview/shwave-gif.gif' | relative_url }}"
-      alt="Shear Horizontal Wave Propagation"
-    >
-
-    <p class="caption">
-      {{ site.data.site_text.featured_caption }}
-    </p>
+  {%- assign scholar = site.data.socials | where: "name", "Google Scholar" | first -%}
+  {%- assign rgate = site.data.socials | where: "name", "ResearchGate" | first %}
+  <div class="profile-buttons">
+    {% if scholar %}
+    <a class="profile-btn" href="{{ scholar.url }}" target="_blank" rel="noopener">
+      <i class="ai ai-google-scholar" aria-hidden="true"></i>
+      <span><strong>Google Scholar</strong><small>Citations &amp; h-index</small></span>
+    </a>
+    {% endif %}
+    {% if rgate %}
+    <a class="profile-btn" href="{{ rgate.url }}" target="_blank" rel="noopener">
+      <i class="ai ai-researchgate" aria-hidden="true"></i>
+      <span><strong>ResearchGate</strong><small>Papers &amp; full texts</small></span>
+    </a>
+    {% endif %}
   </div>
 
   <hr>

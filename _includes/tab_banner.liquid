@@ -1,0 +1,23 @@
+{%- comment -%}
+  Animated, theme-coloured scene(s) under a tab's header.
+  Usage: {% include tab_banner.liquid scene="about" %}  (scenes: assets/js/tab-banners.js)
+  scene="publications" shows the four research-topic cards.
+{%- endcomment -%}
+{%- assign scene = include.scene | default: page.banner -%}
+{%- if scene and scene != "" -%}
+  {%- if scene == "publications" -%}
+    <div class="scene-grid" aria-label="Research topics">
+      {%- assign topics = "elastic-waves|Elastic waves,vibrations|Vibrations,piezoelectric|Piezoelectric materials,energy-harvesting|Energy harvesting" | split: "," -%}
+      {%- for topic in topics -%}
+        {%- assign parts = topic | split: "|" %}
+        <figure class="scene-card">
+          <canvas data-scene="{{ parts[0] }}" role="img" aria-label="Animation: {{ parts[1] }}"></canvas>
+          <figcaption>{{ parts[1] }}</figcaption>
+        </figure>
+      {%- endfor %}
+    </div>
+  {%- else %}
+    <canvas class="scene-strip" data-scene="{{ scene }}" role="img" aria-label="Decorative animation"></canvas>
+  {%- endif %}
+  <script defer src="{{ '/assets/js/tab-banners.js' | relative_url | bust_file_cache }}"></script>
+{%- endif -%}

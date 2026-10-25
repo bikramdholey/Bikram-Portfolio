@@ -31,9 +31,6 @@ content:
       - name: publications_intro
         label: Publications page — subtitle
         type: string
-      - name: featured_caption
-        label: Publications page — caption under the research animation
-        type: string
       - name: quote
         label: Quote at the bottom of the Publications page
         type: text
@@ -90,6 +87,21 @@ content:
     path: _pages/teaching.md
     format: yaml-frontmatter
     fields:
+      - name: layout
+        type: string
+        hidden: true
+      - name: permalink
+        type: string
+        hidden: true
+      - name: nav
+        type: boolean
+        hidden: true
+      - name: nav_order
+        type: number
+        hidden: true
+      - name: banner
+        type: string
+        hidden: true
       - name: title
         type: string
       - name: description
@@ -104,6 +116,21 @@ content:
     path: _pages/contact.md
     format: yaml-frontmatter
     fields:
+      - name: layout
+        type: string
+        hidden: true
+      - name: permalink
+        type: string
+        hidden: true
+      - name: nav
+        type: boolean
+        hidden: true
+      - name: nav_order
+        type: number
+        hidden: true
+      - name: banner
+        type: string
+        hidden: true
       - name: title
         type: string
       - name: description

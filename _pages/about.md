@@ -1,4 +1,5 @@
 ---
+banner: about
 layout: about
 title: About
 permalink: /

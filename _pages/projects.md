@@ -1,4 +1,5 @@
 ---
+banner: projects
 layout: page
 title: Projects
 permalink: /projects/
