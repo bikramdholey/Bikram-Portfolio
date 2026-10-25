@@ -2,7 +2,8 @@
 layout: default
 ---
 <div class="post portfolio-page">
-  <header class="post-header">
+  <header class="post-header{% if page.banner %} has-scene{% endif %}">
+    {% include tab_banner.liquid %}
     <h1 class="post-title">
       {% if site.title == 'blank' %}
         <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
@@ -13,7 +14,6 @@ layout: default
     </h1>
     <p class="desc">{{ page.subtitle }}</p>
   </header>
-  {% include tab_banner.liquid %}
 
   <article>
     {% if page.profile %}

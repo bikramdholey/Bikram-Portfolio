@@ -237,6 +237,156 @@
       ctx.setLineDash([]);
     },
 
+    // Acoustic/elastic metamaterial: a wave enters a lattice of local resonators
+    // and decays inside the band gap while the inner masses ring.
+    metamaterials: function (ctx, w, h, t, c) {
+      var cells = Math.max(3, Math.min(5, Math.round(w / 70)));
+      var x0 = w * 0.3, cw = (w - x0 - 10) / cells, ch = Math.min(cw * 0.95, h * 0.66), y0 = h / 2;
+      // incoming wave, attenuated once it enters the lattice
+      ctx.strokeStyle = c.warm;
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      for (var x = 4; x <= w - 6; x += 3) {
+        var inside = Math.max(0, x - x0);
+        var amp = h * 0.22 * Math.exp(-inside / (cw * 1.1));
+        var y = y0 + amp * Math.sin(x * 0.09 - t * 4);
+        if (x === 4) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+      ctx.lineWidth = 1;
+      for (var i = 0; i < cells; i++) {
+        var cx = x0 + i * cw + cw / 2;
+        ctx.strokeStyle = c.accent;
+        ctx.lineWidth = 2;
+        roundRect(ctx, cx - cw * 0.42, y0 - ch / 2, cw * 0.84, ch, 5);
+        ctx.stroke();
+        // inner resonator on two springs, ringing with a lag per cell
+        var dx = Math.min(cw * 0.18, 8) * Math.sin(t * 5 - i * 0.9) * Math.exp(-i * 0.25);
+        var m = Math.min(cw, ch) * 0.24;
+        ctx.strokeStyle = c.muted;
+        ctx.lineWidth = 1.2;
+        [-1, 1].forEach(function (side) {
+          var xa = cx + side * cw * 0.42, xb = cx + dx + side * m / 2;
+          ctx.beginPath();
+          for (var k = 0; k <= 8; k++) {
+            var xx = xa + ((xb - xa) * k) / 8;
+            var yy = y0 + (k % 2 ? -1 : 1) * (k === 0 || k === 8 ? 0 : m * 0.25);
+            if (k === 0) ctx.moveTo(xx, yy);
+            else ctx.lineTo(xx, yy);
+          }
+          ctx.stroke();
+        });
+        ctx.fillStyle = c.strong;
+        ctx.shadowColor = c.accent;
+        ctx.shadowBlur = 8;
+        ctx.beginPath();
+        ctx.arc(cx + dx, y0, m / 2, 0, TAU);
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      }
+      ctx.lineWidth = 1;
+    },
+
+    // Thermoelastic medium: a heated bar — heat front, thermal expansion and a
+    // vibration that dies out through thermoelastic damping.
+    thermoelastic: function (ctx, w, h, t, c) {
+      var x0 = 30, x1 = w - 46, y0 = h * 0.52, len = x1 - x0;
+      var cycle = (t * 0.35) % 1; // heat front sweeps along, then restarts
+      var vib = Math.exp(-((t * 0.35) % 1) * 3.2) * Math.sin(t * 9);
+      // flame at the hot end
+      var flick = 1 + 0.15 * Math.sin(t * 13);
+      ctx.fillStyle = c.warm;
+      ctx.beginPath();
+      ctx.ellipse(16, y0, 7 * flick, 13 * flick, 0, 0, TAU);
+      ctx.fill();
+      ctx.fillStyle = c.red;
+      ctx.beginPath();
+      ctx.ellipse(16, y0 + 3, 3.5, 7, 0, 0, TAU);
+      ctx.fill();
+      // bar coloured by temperature; thickness grows where it is hot
+      var seg = 40;
+      for (var i = 0; i < seg; i++) {
+        var u = i / seg;
+        var temp = Math.max(0, Math.min(1, (cycle * 1.25 - u) * 3 + 0.15 * (1 - u)));
+        var thick = h * (0.16 + 0.07 * temp);
+        var bend = vib * h * 0.12 * Math.sin(Math.PI * u);
+        var r = Math.round(74 + 170 * temp), g = Math.round(144 - 60 * temp), b = Math.round(217 - 150 * temp);
+        ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
+        ctx.fillRect(x0 + u * len, y0 - thick / 2 + bend, len / seg + 0.6, thick);
+      }
+      // heat waves rising from the hot part
+      ctx.strokeStyle = c.warm;
+      ctx.globalAlpha = 0.6;
+      for (var k = 0; k < 3; k++) {
+        var hx = x0 + len * Math.min(cycle * 1.25, 1) * (0.25 + 0.3 * k);
+        var rise = (t * 22 + k * 9) % 22;
+        ctx.beginPath();
+        for (var s = 0; s <= 10; s++) {
+          var yy = y0 - h * 0.17 - rise - s * 1.4;
+          var xx = hx + 3 * Math.sin(s * 0.9 + t * 6);
+          if (s === 0) ctx.moveTo(xx, yy);
+          else ctx.lineTo(xx, yy);
+        }
+        ctx.stroke();
+      }
+      ctx.globalAlpha = 1;
+      // thermometer
+      var tx = w - 22, ty = h * 0.18, th = h * 0.58;
+      ctx.strokeStyle = c.text;
+      ctx.lineWidth = 2;
+      roundRect(ctx, tx - 5, ty, 10, th, 5);
+      ctx.stroke();
+      ctx.fillStyle = c.red;
+      var fill = th * (0.2 + 0.7 * Math.min(cycle * 1.25, 1));
+      ctx.fillRect(tx - 2.5, ty + th - fill, 5, fill);
+      ctx.beginPath();
+      ctx.arc(tx, ty + th + 5, 7, 0, TAU);
+      ctx.fill();
+      ctx.lineWidth = 1;
+    },
+
+    // Publications hero: a wave packet crossing a layered medium, with ripples.
+    "pub-hero": function (ctx, w, h, t, c) {
+      var layers = 3;
+      for (var l = 0; l < layers; l++) {
+        ctx.fillStyle = c.accent;
+        ctx.globalAlpha = 0.05 + l * 0.05;
+        ctx.fillRect(0, (h * l) / layers, w, h / layers);
+      }
+      ctx.globalAlpha = 1;
+      var cols = Math.round(w / 16), rows = 9;
+      var centre = ((t * 0.18) % 1.4) * w - 0.2 * w; // packet position
+      for (var j = 0; j < rows; j++) {
+        var y0 = ((j + 0.5) * h) / rows;
+        var layer = Math.floor((j / rows) * layers);
+        ctx.fillStyle = layer === 1 ? c.warm : c.accent;
+        for (var i = 0; i <= cols; i++) {
+          var x = (i * w) / cols;
+          var env = Math.exp(-Math.pow((x - centre - layer * 30) / (w * 0.12), 2));
+          var y = y0 + env * (h / rows) * 0.9 * Math.sin(x * 0.07 - t * 5 + layer);
+          ctx.globalAlpha = 0.35 + 0.65 * env;
+          ctx.beginPath();
+          ctx.arc(x, y, 1.6 + 1.4 * env, 0, TAU);
+          ctx.fill();
+        }
+      }
+      ctx.globalAlpha = 1;
+      // ripples from a point source
+      var sx = w * 0.82, sy = h * 0.5;
+      for (var k = 0; k < 4; k++) {
+        var r = ((t * 40 + k * 35) % 140) + 6;
+        ctx.strokeStyle = c.strong;
+        ctx.globalAlpha = Math.max(0, 0.6 - r / 230);
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(sx, sy, r, 0, TAU);
+        ctx.stroke();
+      }
+      ctx.globalAlpha = 1;
+      ctx.lineWidth = 1;
+    },
+
     // --- Other tabs ----------------------------------------------------------------
 
     // About: two travelling waves and their interference.
@@ -418,8 +568,13 @@
     },
   };
 
+  // scenes that look right spread across the whole header
+  var FULL_WIDTH = { about: true, teaching: true, memories: true, "pub-hero": true };
+
   function setup(canvas) {
-    var draw = SCENES[canvas.getAttribute("data-scene")];
+    var name = canvas.getAttribute("data-scene");
+    var draw = SCENES[name];
+    var hero = canvas.hasAttribute("data-hero");
     if (!draw) return;
     var ctx = canvas.getContext("2d");
     var visible = true;
@@ -434,7 +589,15 @@
       }
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       ctx.clearRect(0, 0, w, h);
-      draw(ctx, w, h, reduceMotion ? 1.3 : (now - start) / 1000, palette(canvas));
+      var time = reduceMotion ? 1.3 : (now - start) / 1000;
+      // behind a header title, keep the scene's figure clear of the text on wide screens
+      if (hero && w > 640 && !FULL_WIDTH[name]) {
+        var shift = w * 0.42;
+        ctx.translate(shift, 0);
+        draw(ctx, w - shift, h, time, palette(canvas));
+      } else {
+        draw(ctx, w, h, time, palette(canvas));
+      }
       if (!reduceMotion && visible) requestAnimationFrame(frame);
     }
 
@@ -457,10 +620,60 @@
     }
   }
 
-  function init() {
-    document.querySelectorAll("canvas[data-scene]").forEach(setup);
+  // Scroll reveal: cards, lists and buttons fade up as they come into view, and
+  // section titles draw their underline. Content stays visible without this script.
+  var REVEAL = [
+    ".portfolio-page article h2",
+    ".portfolio-page article h2 + ul",
+    ".portfolio-page article h2 + ol",
+    ".portfolio-page article h3 + ul",
+    ".pub-page h2.section-title",
+    ".paper-box",
+    ".quote-box",
+    ".highlight-box",
+    ".scene-card",
+    ".profile-btn",
+    ".memory-card",
+    ".portfolio-page .cv .card",
+    ".admin-login",
+  ].join(",");
+
+  function initReveal() {
+    if (reduceMotion || !("IntersectionObserver" in window)) return;
+    var items = Array.prototype.slice.call(document.querySelectorAll(REVEAL));
+    if (!items.length) return;
+    document.documentElement.classList.add("reveal-on");
+    var io = new IntersectionObserver(
+      function (entries) {
+        var batch = 0;
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          var el = e.target;
+          el.style.transitionDelay = Math.min(batch++, 5) * 90 + "ms";
+          el.classList.add("revealed");
+          io.unobserve(el);
+          // drop the stagger once shown, so hover effects respond instantly
+          setTimeout(function () {
+            el.style.transitionDelay = "";
+          }, 1400);
+        });
+      },
+      { rootMargin: "0px 0px -8% 0px" }
+    );
+    items.forEach(function (el) {
+      el.classList.add("reveal");
+      io.observe(el);
+    });
   }
 
+  function init() {
+    document.querySelectorAll("canvas[data-scene]").forEach(setup);
+    initReveal();
+  }
+
+  // the script tag can appear more than once on a page (hero + grid): start once
+  if (window.__tabScenesStarted) return;
+  window.__tabScenesStarted = true;
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
 })();

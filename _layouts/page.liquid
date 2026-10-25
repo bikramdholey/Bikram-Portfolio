@@ -9,11 +9,11 @@ layout: default
 {% endif %}
 
 <div class="post portfolio-page">
-  <header class="post-header">
+  <header class="post-header{% if page.banner %} has-scene{% endif %}">
+    {% include tab_banner.liquid %}
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-description">{{ page.description }}</p>
   </header>
-  {% include tab_banner.liquid %}
 
   <article>
     {{ content }}

@@ -3,7 +3,8 @@ layout: default
 ---
 {% unless site.data.resume %}
   <div class="post portfolio-page">
-    <header class="post-header">
+    <header class="post-header{% if page.banner %} has-scene{% endif %}">
+    {% include tab_banner.liquid %}
       <h1 class="post-title">
         {{ page.title }}
         {% if page.cv_pdf %}
@@ -25,7 +26,6 @@ layout: default
         <p class="post-description">{{ page.description }}</p>
       {% endif %}
     </header>
-  {% include tab_banner.liquid %}
 
     <article>
       <div class="cv">

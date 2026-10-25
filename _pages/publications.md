@@ -10,12 +10,15 @@ nav_order: 87
 
 <div class="container mt-5 pub-page portfolio-page">
 
-  <header class="post-header">
+  <header class="post-header has-scene">
+    {% include tab_banner.liquid scene="pub-hero" %}
     <h1 class="post-title">Publications</h1>
     <p class="post-description">{{ site.data.site_text.publications_intro | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
   </header>
 
-  {% include tab_banner.liquid scene="publications" %}
+  <h2 class="section-title">🔬 Specialization</h2>
+
+  {% include tab_banner.liquid grid="specialization" %}
 
   <hr>
 
