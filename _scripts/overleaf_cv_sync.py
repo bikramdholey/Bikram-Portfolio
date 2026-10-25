@@ -355,9 +355,7 @@ def convert(tex):
         else:
             data["other_sections"].append({"title": title.title(), "items": generic(items)})
 
-    # newest first, keeping the CV's own order within a year
-    for key in ("journal_articles", "book_chapters"):
-        data[key] = sorted(reversed(data[key]), key=lambda p: p["year"] or "0", reverse=True)
+    # publications keep the CV's own order and numbering
     return no_pipes(data)
 
 
