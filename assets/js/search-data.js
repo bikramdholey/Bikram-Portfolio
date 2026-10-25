@@ -24,8 +24,8 @@ ninja.data = [{
             window.location.href = "/Bikram-Portfolio/contact/";
           },
         },{id: "nav-cv",
-          title: "cv",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
+          title: "CV",
+          description: "Curriculum vitae, kept up to date from my Overleaf CV. Use the PDF button to download it.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/Bikram-Portfolio/cv/";
@@ -50,6 +50,13 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/Bikram-Portfolio/publications/";
+          },
+        },{id: "nav-admin",
+          title: "Admin",
+          description: "Edit the website — sign in with the site owner&#39;s GitHub account.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/Bikram-Portfolio/admin/";
           },
         },{id: "projects-morse-theory",
           title: 'Morse Theory',
