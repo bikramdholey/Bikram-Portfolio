@@ -8,6 +8,11 @@ name: Sync CV from Overleaf
 on:
   schedule:
     - cron: "17 */3 * * *" # every 3 hours
+  push:
+    branches: [main]
+    paths: # re-sync when the sync itself changes
+      - .github/workflows/sync-cv-from-overleaf.yml
+      - _scripts/overleaf_cv_sync.py
   workflow_dispatch:
     inputs:
       force:
