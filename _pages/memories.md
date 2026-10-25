@@ -6,6 +6,20 @@ nav: true
 nav_order: 70
 ---
 
+{%- comment -%}
+Owner tools: open this page with ?manage in the address to show them.
+Uploads go through GitHub (only the repo owner can commit); a new folder
+under assets/img/memories/ becomes a new album automatically.
+{%- endcomment -%}
+<div class="memory-manage" hidden>
+  <a class="memory-manage-btn" href="{{ site.memories_upload_url }}" target="_blank" rel="noopener">➕ New album / upload photos</a>
+  <p>
+    Drag a <strong>folder</strong> of photos onto the GitHub page (the folder name becomes the album name),
+    or type <code>album-name/</code> in the file name box first. Then click <strong>Commit changes</strong>;
+    the site updates in a few minutes.
+  </p>
+</div>
+
 <div class="memory-grid">
 
 {% assign base_path = '/assets/img/memories/' %}
@@ -86,7 +100,7 @@ nav_order: 70
         <img src="{{ cover.path | relative_url }}" alt="{{ folder }}" loading="lazy">
       </div>
 
-      <h2>{{ folder | replace: '-', ' ' }}</h2>
+      <h2>{{ site.data.memory_albums[folder] | default: folder | replace: '-', ' ' }}</h2>
       <p class="memory-counts">📷 {{ photo_count }}</p>
 
     </a>
@@ -136,3 +150,4 @@ nav_order: 70
   color: var(--global-text-color-light);
 }
 </style>
+{% include memory_manage.liquid %}

@@ -16,6 +16,12 @@ layout: page
   {{ photo_count }} photo{% if photo_count != 1 %}s{% endif %}
 </p>
 
+<div class="memory-manage" hidden>
+  <a class="memory-manage-btn" href="{{ site.memories_upload_url }}/{{ page.folder | uri_escape }}" target="_blank" rel="noopener">➕ Add photos to this album</a>
+  <p>Drag photos onto the GitHub page and click <strong>Commit changes</strong>; they appear here in a few minutes.</p>
+</div>
+{% include memory_manage.liquid %}
+
 {% if photo_count > 0 %}
 <div class="trip-photos">
   {% for file in files %}

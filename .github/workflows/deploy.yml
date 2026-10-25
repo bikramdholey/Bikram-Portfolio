@@ -37,6 +37,11 @@ jobs:
           gem install bundler
           bundle install
 
+      - name: Optimize memory photos 🖼️
+        run: |
+          pip install --quiet Pillow pillow-heif
+          python3 _scripts/optimize_memory_photos.py
+
       - name: Build for Netlify 🔧
         run: JEKYLL_ENV=production bundle exec jekyll build
 
