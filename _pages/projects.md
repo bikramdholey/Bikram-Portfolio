@@ -38,8 +38,8 @@ horizontal: false
 
   /* Category headings styling */
   .category {
-    color: #004d40;
-    border-bottom: 2px solid #00695c;
+    color: var(--accent-strong, #004d40);
+    border-bottom: 2px solid var(--accent, #00695c);
     padding-bottom: 6px;
     margin-top: 1.5rem;
     margin-bottom: 1rem;

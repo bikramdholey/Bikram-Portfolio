@@ -7,9 +7,9 @@ module MemoryAlbums
   class AlbumPage < Jekyll::PageWithoutAFile
     def initialize(site, folder)
       super(site, site.source, File.join("memories", "#{folder}-trip"), "index.html")
-      titles = site.data["memory_albums"] || {}
+      entry = Array(site.data["memory_albums"]).find { |a| a.is_a?(Hash) && a["folder"].to_s == folder }
       data["layout"] = "trip"
-      data["title"] = titles[folder] || folder
+      data["title"] = entry && !entry["title"].to_s.empty? ? entry["title"] : folder
       data["folder"] = folder
       data["permalink"] = "/memories/#{folder}-trip/"
     end

@@ -9,36 +9,10 @@ nav_order: 4
 
 <!-- pages/contact.md -->
 
-<style>
-  .teal-accent { color: #00695c; font-weight: 600; } /* deeper teal */
-  .deep-teal { color: #004d40; font-weight: 700; }
-  .section-title { color: #004d40; border-bottom: 2px solid #00695c; padding-bottom: 6px; margin-top: 25px; }
-  .highlight-box {
-    background-color: #d0f0eb;
-    border-left: 6px solid #00695c;
-    padding: 1rem 1.2rem;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-  }
-  .quote-box {
-    background-color: #e0f2f1;
-    border-left: 5px solid #004d40;
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    text-align: center;
-    font-style: italic;
-    font-size: 1.05rem;
-    color: #004d40;
-    margin-top: 2rem;
-  }
-  ul { margin-left: 1.2rem; }
-  a { color: #00796b; text-decoration: none; }
-  a:hover { text-decoration: underline; color: #004d40; }
-</style>
 
 <div class="highlight-box">
   <span class="deep-teal" style="font-size:1.2rem; font-weight:700;">Bikram Dholey</span><br>
-  <span style="color:#00796b; font-weight:500;">
+  <span style="color:var(--accent); font-weight:500;">
     Research Scholar, Department of Mathematics<br>
     Jadavpur University, Kolkata, India
   </span>

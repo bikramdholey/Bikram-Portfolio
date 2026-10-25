@@ -31,16 +31,16 @@ announcements:
 
 ## 👨‍🏫 About Me
 
-I’m Bikram Dholey, a Ph.D. Scholar in Mathematics at Jadavpur University and former Assistant Professor at Brainware University, Kolkata. I specialize in wave propagation, smart materials, piezoelectricity, elastodynamics, and vibrations, developing mathematical models and computational simulations to study wave behavior in smart composite structures for applications in aerospace, biomedicine, and structural health monitoring. Passionate about both research and teaching, I integrate rigorous theory with practical applications to spark curiosity and analytical thinking. My teaching approach blends interactive learning, innovative pedagogy, and mentorship, encouraging students to think critically and tackle complex problems. I have guided postgraduate research, contributed to curriculum design, and promoted collaborative learning in mathematics. Trained in Matlab, Mathematica, Python, and LaTeX, I bridge classical mathematical theory with modern computational techniques. My academic interests also span differential equations, graph theory, and manifold theory, providing a strong foundation for my research. My vision is to advance mathematical sciences, foster interdisciplinary collaboration, and inspire the next generation of scholars to solve real‑world challenges through the power of mathematics.
+{{ site.data.site_text.about_intro | markdownify }}
 
 ---
 
-{%- comment -%}
+{% comment %}
 Everything below comes from the Overleaf CV (_data/overleaf_cv.json, refreshed by
 .github/workflows/sync-cv-from-overleaf.yml). Edit the CV in Overleaf, not here.
-{%- endcomment -%}
-{%- assign cv = site.data.overleaf_cv -%}
-{%- assign links = site.data.institution_links -%}
+{% endcomment %}
+{% assign cv = site.data.overleaf_cv %}
+{% assign links = site.data.institution_links %}
 
 ## 🌐 Web Addresses
 
@@ -61,7 +61,7 @@ Everything below comes from the Overleaf CV (_data/overleaf_cv.json, refreshed b
 ## 📘 Education
 
 {% for e in cv.education -%}
-{%- assign url = links[e.institution] %}
+{%- assign link = links | where: "name", e.institution | first -%}{%- assign url = link.url %}
 - _{{ e.degree }}_ — {% if url %}[{{ e.institution }}]({{ url }}){% else %}{{ e.institution }}{% endif %} ({{ e.year }}){% if e.score != "" %} — {{ e.score }}{% endif %}
 {%- endfor %}
 

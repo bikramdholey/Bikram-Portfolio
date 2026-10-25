@@ -1,8 +1,12 @@
-# Website links for institutions named in the Overleaf CV.
-# The CV sync doesn't touch this file; the About page links any institution
-# whose name matches a key here. Add new entries as needed.
-Jadavpur University: https://jadavpuruniversity.in/
-Bhaktabala B.Ed. College: https://bhaktabalacollege.org/
-Ramakrishna Mission Vivekananda Centenary College: https://www.rkmvccrahara.org/
-Acharya Jagadish Chandra Bose College: https://ajcbosecollege.org/webportal/
-Brainware University: https://www.brainwareuniversity.ac.in/
+# Website links for institutions named in the Overleaf CV (edit in the Admin
+# panel). The About page links any institution whose name matches exactly.
+- name: Jadavpur University
+  url: https://jadavpuruniversity.in/
+- name: Bhaktabala B.Ed. College
+  url: https://bhaktabalacollege.org/
+- name: Ramakrishna Mission Vivekananda Centenary College
+  url: https://www.rkmvccrahara.org/
+- name: Acharya Jagadish Chandra Bose College
+  url: https://ajcbosecollege.org/webportal/
+- name: Brainware University
+  url: https://www.brainwareuniversity.ac.in/

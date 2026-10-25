@@ -335,6 +335,7 @@ defaults:
       path: ""
       type: "projects"
     values:
+      layout: page # projects added from the Admin panel have no layout of their own
       default_img: "/assets/img/Morse2.gif"
 
 # ---------------------------------------------------------------------------

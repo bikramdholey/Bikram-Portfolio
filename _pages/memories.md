@@ -100,7 +100,8 @@ under assets/img/memories/ becomes a new album automatically.
         <img src="{{ cover.path | relative_url }}" alt="{{ folder }}" loading="lazy">
       </div>
 
-      <h2>{{ site.data.memory_albums[folder] | default: folder | replace: '-', ' ' }}</h2>
+      {% assign album = site.data.memory_albums | where: 'folder', folder | first %}
+      <h2>{{ album.title | default: folder | replace: '-', ' ' }}</h2>
       <p class="memory-counts">📷 {{ photo_count }}</p>
 
     </a>

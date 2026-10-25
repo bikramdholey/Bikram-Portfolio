@@ -1,0 +1,326 @@
+/*******************************************************************************
+ * Portfolio design shared by every tab (teal header box, underlined section
+ * titles, tinted cards, year badges, quote box), in light and dark mode.
+ *
+ * Pages using the page / cv / about layouts get it automatically through the
+ * .portfolio-page wrapper: "## Heading" becomes a section title and the list
+ * right under it becomes a card. Pages can also use the classes directly.
+ ******************************************************************************/
+
+// Palettes ---------------------------------------------------------------
+
+.portfolio-page,
+.sec-article {
+  --accent: #00695c;
+  --accent-strong: #004d40;
+  --tint: #e0f2f1;
+  --header-tint: #d0f0eb;
+  --badge-bg: #b2dfdb;
+}
+
+// teal (articles), deep blue (conferences), amber (book chapters)
+.sec-conference {
+  --accent: #1e5aa8;
+  --accent-strong: #123d73;
+  --tint: #e8f0fb;
+  --badge-bg: #c9dcf5;
+}
+
+.sec-book {
+  --accent: #c77700;
+  --accent-strong: #7a4800;
+  --tint: #fff4e0;
+  --badge-bg: #ffe0a8;
+}
+
+html[data-theme="dark"] {
+  .portfolio-page,
+  .sec-article {
+    --accent: #4db6ac;
+    --accent-strong: #80cbc4;
+    --tint: rgba(77, 182, 172, 0.12);
+    --header-tint: rgba(77, 182, 172, 0.16);
+    --badge-bg: rgba(77, 182, 172, 0.25);
+  }
+
+  .sec-conference {
+    --accent: #64a0e8;
+    --accent-strong: #a9c9f2;
+    --tint: rgba(100, 160, 232, 0.12);
+    --badge-bg: rgba(100, 160, 232, 0.25);
+  }
+
+  .sec-book {
+    --accent: #f0a830;
+    --accent-strong: #ffd38a;
+    --tint: rgba(240, 168, 48, 0.12);
+    --badge-bg: rgba(240, 168, 48, 0.25);
+  }
+}
+
+// Building blocks ----------------------------------------------------------
+
+.teal-accent {
+  color: var(--accent, #00695c);
+  font-weight: 600;
+}
+
+.deep-teal {
+  color: var(--accent-strong, #004d40);
+  font-weight: 700;
+}
+
+.section-title {
+  color: var(--accent-strong, #004d40);
+  border-bottom: 2px solid var(--accent, #00695c);
+  padding-bottom: 6px;
+  margin-top: 25px;
+}
+
+.highlight-box {
+  background-color: var(--header-tint, #d0f0eb);
+  border-left: 6px solid var(--accent, #00695c);
+  color: var(--global-text-color);
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.paper-box {
+  background-color: var(--tint, #e0f2f1);
+  border-left: 5px solid var(--accent, #004d40);
+  color: var(--global-text-color);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+
+  ul,
+  ol {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  ol {
+    padding-left: 2rem;
+  }
+
+  ol > li::marker {
+    color: var(--accent-strong);
+    font-weight: 700;
+  }
+
+  li {
+    margin-bottom: 0.8rem;
+    line-height: 1.7;
+  }
+}
+
+.quote-box {
+  background-color: var(--tint, #e0f2f1);
+  border-left: 5px solid var(--accent-strong, #004d40);
+  color: var(--accent-strong, #004d40);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.05rem;
+  margin-top: 2rem;
+}
+
+.image-box {
+  text-align: center;
+  margin: 2rem 0;
+
+  img {
+    max-width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.caption {
+  font-size: 0.9rem;
+  color: var(--accent-strong, #004d40);
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.pub-venue {
+  color: var(--global-text-color);
+  opacity: 0.85;
+}
+
+.pub-year {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0 8px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-style: normal;
+  background-color: var(--badge-bg);
+  color: var(--accent-strong);
+}
+
+.pub-tag {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 0 7px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid var(--accent);
+  color: var(--accent-strong);
+}
+
+// Automatic styling for ordinary pages ----------------------------------------
+
+.portfolio-page {
+  > .post-header {
+    background-color: var(--header-tint);
+    border-left: 6px solid var(--accent);
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+
+    .post-title {
+      color: var(--accent-strong);
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .post-description,
+    .desc {
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+  }
+
+  article {
+    a {
+      color: var(--accent);
+    }
+
+    a:hover {
+      color: var(--accent-strong);
+    }
+
+    h2 {
+      color: var(--accent-strong);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 6px;
+      margin-top: 2rem;
+
+      // pages that already wrap the heading text in .section-title
+      .section-title {
+        border: 0;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    h3 {
+      color: var(--accent);
+    }
+
+    // the list right under a section heading becomes a card
+    h2 + ul,
+    h2 + ol,
+    h3 + ul,
+    h3 + ol {
+      background-color: var(--tint);
+      border-left: 5px solid var(--accent);
+      padding: 1rem 1.5rem 1rem 2.4rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+
+      li {
+        margin-bottom: 0.4rem;
+        line-height: 1.7;
+      }
+    }
+
+    ol > li::marker {
+      color: var(--accent-strong);
+      font-weight: 700;
+    }
+  }
+
+  // CV page: each section is a bootstrap card
+  .cv .card {
+    background-color: var(--tint);
+    border: 0;
+    border-left: 5px solid var(--accent);
+    border-radius: 8px;
+
+    .card-title {
+      color: var(--accent-strong);
+    }
+
+    .list-group-item {
+      background-color: transparent;
+    }
+
+    // year badges match the Publications page
+    .badge {
+      background-color: var(--badge-bg) !important;
+      color: var(--accent-strong) !important;
+    }
+  }
+}
+
+// Publications page links (it uses its own container rather than a layout)
+.pub-page a {
+  color: var(--accent, #00796b);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--accent-strong, #004d40);
+  }
+}
+
+// Admin page buttons
+.admin-login {
+  margin-bottom: 1.5rem;
+
+  p {
+    margin: 0.6rem 0 0;
+    color: var(--global-text-color-light);
+  }
+}
+
+.portfolio-page article a.admin-btn,
+a.admin-btn {
+  display: inline-block;
+  margin: 0.2rem 0;
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  background-color: var(--accent, #00695c);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--accent-strong, #004d40);
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+html[data-theme="dark"] .portfolio-page article a.admin-btn,
+html[data-theme="dark"] a.admin-btn {
+  color: #0b1f1d;
+
+  &:hover {
+    color: #0b1f1d;
+  }
+}
+
+// Memories album cards keep their own headings
+.portfolio-page article .memory-card h2 {
+  border: 0;
+  padding: 0;
+  margin-top: 8px;
+}

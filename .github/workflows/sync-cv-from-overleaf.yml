@@ -19,6 +19,10 @@ on:
         description: "Rebuild even if the Overleaf project has not changed"
         type: boolean
         default: false
+      payload:
+        description: Sent by the Admin panel (Pages CMS) button; not used
+        type: string
+        required: false
 
 permissions:
   contents: write

@@ -1,4 +1,7 @@
-# Optional display titles for memory albums, keyed by folder name in
-# assets/img/memories/. Albums not listed here use the folder name.
-Brainware: Brainware Teaching
-manali: Manali
+# Optional display titles for memory albums (edit in the Admin panel).
+# folder: the folder name in assets/img/memories/; title: what the site shows.
+# Albums not listed here use the folder name.
+- folder: Brainware
+  title: Brainware Teaching
+- folder: manali
+  title: Manali
