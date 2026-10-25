@@ -19,8 +19,8 @@ keywords: jekyll, jekyll-theme, academic-website, portfolio-website
 lang: en
 icon: ⚛️
 
-baseurl: ""
-url: "https://dainty-daffodil-d541e8.netlify.app"
+baseurl: "" # the GitHub Pages build overrides this with /Bikram-Portfolio
+url: "https://bikramdholey.github.io"
 last_updated: false
 back_to_top: true
 
