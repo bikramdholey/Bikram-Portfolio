@@ -20,7 +20,7 @@ lang: en
 icon: ⚛️
 
 baseurl: "" # the GitHub Pages build overrides this with /Bikram-Portfolio
-url: "https://bikramdholey.github.io"
+url: "https://bikram-dholey.netlify.app"
 last_updated: false
 back_to_top: true
 
