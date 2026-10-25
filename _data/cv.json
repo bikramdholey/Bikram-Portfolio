@@ -94,115 +94,11 @@
     "type": "time_table",
     "contents": [
       {
-        "title": "Influence of initial stress and interfacial stiffness on torsional wave dynamics in metamaterial waveguides embedded in porous medium",
-        "institution": "Mechanics Research Communications · SCIE · IF 2.6 · Q2",
-        "year": "2026",
-        "description": [
-          "<a href=\"https://doi.org/10.1016/j.mechrescom.2026.104813\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1016/j.mechrescom.2026.104813</a>"
-        ]
-      },
-      {
-        "title": "Analytical modelling and simulation of reverse magnetic response in cylindrical wave with strain gradient interfaces",
-        "institution": "Applied Mathematical Modelling · SCIE · IF 5.5 · Q1",
-        "year": "2026",
-        "description": [
-          "<a href=\"https://doi.org/10.1016/j.apm.2026.117229\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1016/j.apm.2026.117229</a>"
-        ]
-      },
-      {
-        "title": "A new approach to interfacial material effects on plane wave reflection–transmission in PZT-5A–epoxy composite structure",
-        "institution": "Journal of Vibration and Control · SCIE · IF 2.4 · Q2",
-        "year": "2026",
-        "description": [
-          "<a href=\"https://doi.org/10.1177/10775463261476141\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1177/10775463261476141</a>"
-        ]
-      },
-      {
-        "title": "Analytical modeling of SH-waves in functionally graded orthotropic–piezoelectric cylindrical waveguides with electromechanically coupled interfaces",
-        "institution": "Journal of Engineering Mathematics · SCIE · IF 2.0 · Q2",
-        "year": "2026",
-        "description": [
-          "<a href=\"https://doi.org/10.1007/s10665-026-10543-1\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1007/s10665-026-10543-1</a>"
-        ]
-      },
-      {
-        "title": "Shear Horizontal Wave Dynamics in a Micromechanical Piezoelectric Fiber-Reinforced Composite Substrate Loaded with Complex Fluid",
-        "institution": "ZAMM – Journal of Applied Mathematics and Mechanics · SCIE · IF 3.2 · Q2",
-        "year": "2026",
-        "description": [
-          "<a href=\"https://doi.org/10.1002/zamm.70517\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1002/zamm.70517</a>"
-        ]
-      },
-      {
-        "title": "Size-Dependent DPL Model for Thermoelastic Damping in Piezothermoelastic Fiber-Reinforced Resonator",
-        "institution": "Continuum Mechanics and Thermodynamics · SCIE · IF 3.0 · Q2",
-        "year": "2026",
-        "description": [
-          "<a href=\"https://doi.org/10.1007/s00161-026-01506-z\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1007/s00161-026-01506-z</a>"
-        ]
-      },
-      {
-        "title": "Size-dependent interfacial elasticity effects on SH wave propagation in cylindrical structures",
-        "institution": "Physica Scripta · SCIE · IF 2.6 · Q2",
-        "year": "2026",
-        "description": [
-          "<a href=\"https://doi.org/10.1088/1402-4896/ae7d70\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1088/1402-4896/ae7d70</a>"
-        ]
-      },
-      {
-        "title": "Electromechanical coupling interaction of shear-horizontal waves in piezoelectric semiconductor layered structures with electrically tunable interfaces",
-        "institution": "European Journal of Mechanics – A/Solids · SCIE · IF 4.7 · Q1",
-        "year": "2026",
-        "description": [
-          "<a href=\"https://doi.org/10.1016/j.euromechsol.2026.106222\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1016/j.euromechsol.2026.106222</a>"
-        ]
-      },
-      {
-        "title": "Novel SH-wave Propagation Modeling in Fluid-Loaded Piezoelectric Viscoelastic Fiber-Reinforced Composites",
-        "institution": "Mechanics Based Design of Structures and Machines · SCIE · IF 3.7 · Q2",
-        "year": "2026",
-        "description": [
-          "<a href=\"https://doi.org/10.1080/15397734.2026.2663341\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1080/15397734.2026.2663341</a>"
-        ]
-      },
-      {
-        "title": "Influence of Dual Electric Membranes Pairing with a Sandwiched Electrically Induced Spring Interface on SH-Wave Propagation in Smart Porous Composite",
-        "institution": "Journal of Vibration Engineering & Technologies · SCIE · IF 3.5 · Q1",
-        "year": "2026",
-        "description": [
-          "<a href=\"https://doi.org/10.1007/s42417-026-02411-0\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1007/s42417-026-02411-0</a>"
-        ]
-      },
-      {
-        "title": "Data-Driven Modeling of Love Wave Dynamics in Piezoelectric Fiber-Reinforced Structure Using Machine Learning",
-        "institution": "Journal of Computer Science · Scopus",
-        "year": "2026",
-        "description": [
-          "<a href=\"https://computersciencejournal.org/wp-content/uploads/14-2.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">View paper ↗</a>"
-        ]
-      },
-      {
-        "title": "Influence of Interfacial Stiffness and Density on Love-Type Wave Propagation in a Fiber-Reinforced and Fiber-Piezoelectric Layered Medium",
-        "institution": "International Journal of Applied Mechanics · SCIE · IF 2.3 · Q2",
-        "year": "2026",
-        "description": [
-          "<a href=\"https://doi.org/10.1142/S1758825126500080\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1142/S1758825126500080</a>"
-        ]
-      },
-      {
-        "title": "Analysis of Cylindrical Membrane Effects on Shear-Horizontal Wave Propagation in PFRC Core–Shell Structures",
-        "institution": "Mathematical Methods in the Applied Sciences · SCIE · IF 1.8 · Q1",
-        "year": "2026",
-        "description": [
-          "<a href=\"https://doi.org/10.1002/mma.70496\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1002/mma.70496</a>"
-        ]
-      },
-      {
-        "title": "Dynamic Characteristics of Shear-Horizontal Waves in Porous Sandwich Systems",
-        "institution": "Applied Mathematical Biosystems",
+        "title": "The Influence of SH-wave Propagation in a Tri-layered Composite Structure with Interfacial Imperfections",
+        "institution": "Journal of Vibration Engineering & Technologies · SCIE · IF 2.4 · Q2",
         "year": "2025",
         "description": [
-          "<a href=\"https://ambjournal.com\" target=\"_blank\" rel=\"noopener noreferrer\">View paper ↗</a>"
+          "<a href=\"https://doi.org/10.1007/s42417-025-01776-y\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1007/s42417-025-01776-y</a>"
         ]
       },
       {
@@ -214,11 +110,115 @@
         ]
       },
       {
-        "title": "The Influence of SH-wave Propagation in a Tri-layered Composite Structure with Interfacial Imperfections",
-        "institution": "Journal of Vibration Engineering & Technologies · SCIE · IF 2.4 · Q2",
+        "title": "Dynamic Characteristics of Shear-Horizontal Waves in Porous Sandwich Systems",
+        "institution": "Applied Mathematical Biosystems",
         "year": "2025",
         "description": [
-          "<a href=\"https://doi.org/10.1007/s42417-025-01776-y\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1007/s42417-025-01776-y</a>"
+          "<a href=\"https://ambjournal.com\" target=\"_blank\" rel=\"noopener noreferrer\">View paper ↗</a>"
+        ]
+      },
+      {
+        "title": "Analysis of Cylindrical Membrane Effects on Shear-Horizontal Wave Propagation in PFRC Core–Shell Structures",
+        "institution": "Mathematical Methods in the Applied Sciences · SCIE · IF 1.8 · Q1",
+        "year": "2026",
+        "description": [
+          "<a href=\"https://doi.org/10.1002/mma.70496\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1002/mma.70496</a>"
+        ]
+      },
+      {
+        "title": "Influence of Interfacial Stiffness and Density on Love-Type Wave Propagation in a Fiber-Reinforced and Fiber-Piezoelectric Layered Medium",
+        "institution": "International Journal of Applied Mechanics · SCIE · IF 2.3 · Q2",
+        "year": "2026",
+        "description": [
+          "<a href=\"https://doi.org/10.1142/S1758825126500080\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1142/S1758825126500080</a>"
+        ]
+      },
+      {
+        "title": "Data-Driven Modeling of Love Wave Dynamics in Piezoelectric Fiber-Reinforced Structure Using Machine Learning",
+        "institution": "Journal of Computer Science · Scopus",
+        "year": "2026",
+        "description": [
+          "<a href=\"https://computersciencejournal.org/wp-content/uploads/14-2.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">View paper ↗</a>"
+        ]
+      },
+      {
+        "title": "Influence of Dual Electric Membranes Pairing with a Sandwiched Electrically Induced Spring Interface on SH-Wave Propagation in Smart Porous Composite",
+        "institution": "Journal of Vibration Engineering & Technologies · SCIE · IF 3.5 · Q1",
+        "year": "2026",
+        "description": [
+          "<a href=\"https://doi.org/10.1007/s42417-026-02411-0\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1007/s42417-026-02411-0</a>"
+        ]
+      },
+      {
+        "title": "Novel SH-wave Propagation Modeling in Fluid-Loaded Piezoelectric Viscoelastic Fiber-Reinforced Composites",
+        "institution": "Mechanics Based Design of Structures and Machines · SCIE · IF 3.7 · Q2",
+        "year": "2026",
+        "description": [
+          "<a href=\"https://doi.org/10.1080/15397734.2026.2663341\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1080/15397734.2026.2663341</a>"
+        ]
+      },
+      {
+        "title": "Electromechanical coupling interaction of shear-horizontal waves in piezoelectric semiconductor layered structures with electrically tunable interfaces",
+        "institution": "European Journal of Mechanics – A/Solids · SCIE · IF 4.7 · Q1",
+        "year": "2026",
+        "description": [
+          "<a href=\"https://doi.org/10.1016/j.euromechsol.2026.106222\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1016/j.euromechsol.2026.106222</a>"
+        ]
+      },
+      {
+        "title": "Size-dependent interfacial elasticity effects on SH wave propagation in cylindrical structures",
+        "institution": "Physica Scripta · SCIE · IF 2.6 · Q2",
+        "year": "2026",
+        "description": [
+          "<a href=\"https://doi.org/10.1088/1402-4896/ae7d70\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1088/1402-4896/ae7d70</a>"
+        ]
+      },
+      {
+        "title": "Size-Dependent DPL Model for Thermoelastic Damping in Piezothermoelastic Fiber-Reinforced Resonator",
+        "institution": "Continuum Mechanics and Thermodynamics · SCIE · IF 3.0 · Q2",
+        "year": "2026",
+        "description": [
+          "<a href=\"https://doi.org/10.1007/s00161-026-01506-z\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1007/s00161-026-01506-z</a>"
+        ]
+      },
+      {
+        "title": "Shear Horizontal Wave Dynamics in a Micromechanical Piezoelectric Fiber-Reinforced Composite Substrate Loaded with Complex Fluid",
+        "institution": "ZAMM – Journal of Applied Mathematics and Mechanics · SCIE · IF 3.2 · Q2",
+        "year": "2026",
+        "description": [
+          "<a href=\"https://doi.org/10.1002/zamm.70517\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1002/zamm.70517</a>"
+        ]
+      },
+      {
+        "title": "Analytical modeling of SH-waves in functionally graded orthotropic–piezoelectric cylindrical waveguides with electromechanically coupled interfaces",
+        "institution": "Journal of Engineering Mathematics · SCIE · IF 2.0 · Q2",
+        "year": "2026",
+        "description": [
+          "<a href=\"https://doi.org/10.1007/s10665-026-10543-1\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1007/s10665-026-10543-1</a>"
+        ]
+      },
+      {
+        "title": "A new approach to interfacial material effects on plane wave reflection–transmission in PZT-5A–epoxy composite structure",
+        "institution": "Journal of Vibration and Control · SCIE · IF 2.4 · Q2",
+        "year": "2026",
+        "description": [
+          "<a href=\"https://doi.org/10.1177/10775463261476141\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1177/10775463261476141</a>"
+        ]
+      },
+      {
+        "title": "Analytical modelling and simulation of reverse magnetic response in cylindrical wave with strain gradient interfaces",
+        "institution": "Applied Mathematical Modelling · SCIE · IF 5.5 · Q1",
+        "year": "2026",
+        "description": [
+          "<a href=\"https://doi.org/10.1016/j.apm.2026.117229\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1016/j.apm.2026.117229</a>"
+        ]
+      },
+      {
+        "title": "Influence of initial stress and interfacial stiffness on torsional wave dynamics in metamaterial waveguides embedded in porous medium",
+        "institution": "Mechanics Research Communications · SCIE · IF 2.6 · Q2",
+        "year": "2026",
+        "description": [
+          "<a href=\"https://doi.org/10.1016/j.mechrescom.2026.104813\" target=\"_blank\" rel=\"noopener noreferrer\">DOI: 10.1016/j.mechrescom.2026.104813</a>"
         ]
       }
     ]
@@ -228,14 +228,14 @@
     "type": "time_table",
     "contents": [
       {
-        "title": "Shear-Horizontal Wave Propagation in Piezoelectric Cylindrical Structure with Imperfect Interface",
-        "institution": "Proceedings of Innovations in Mathematics: An International Conference on Research and Applications · ISBN 978-93-7837-042-7 · Book Rivers",
-        "year": "2026"
-      },
-      {
         "title": "Modeling Dispersive Characteristics of Love Waves in Fiber-reinforced Composite Structure",
         "institution": "Contemporary Explorations in Multidisciplinary Sciences · ISBN 978-93-48301-03-1 · Unika Prakashan",
         "year": "2025"
+      },
+      {
+        "title": "Shear-Horizontal Wave Propagation in Piezoelectric Cylindrical Structure with Imperfect Interface",
+        "institution": "Proceedings of Innovations in Mathematics: An International Conference on Research and Applications · ISBN 978-93-7837-042-7 · Book Rivers",
+        "year": "2026"
       }
     ]
   },

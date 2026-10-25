@@ -149,9 +149,19 @@ nav_order: 87
     color: #80cbc4;
   }
 
-  .paper-box ul {
+  .paper-box ul,
+  .paper-box ol {
     margin: 0;
     padding-left: 1.2rem;
+  }
+
+  .paper-box ol {
+    padding-left: 2rem;
+  }
+
+  .paper-box ol > li::marker {
+    color: var(--accent-strong);
+    font-weight: 700;
   }
 
   .paper-box li {
@@ -204,21 +214,21 @@ nav_order: 87
   <h2 class="section-title">📘 Published Research Articles</h2>
 
   <div class="paper-box">
-    <ul>
+    <ol>
       {% for pub in site.data.overleaf_cv.journal_articles %}
       <li>
         <strong class="deep-teal">{{ pub.title }}</strong><br>
         <em class="pub-venue">{{ pub.venue }}</em>
         {% if pub.year != "" %}<span class="pub-year">{{ pub.year }}</span>{% endif %}
         {% for tag in pub.indexing %}<span class="pub-tag">{{ tag }}</span>{% endfor %}
-        {% if pub.impact_factor != "" %}<span class="pub-tag">IF {{ pub.impact_factor }}</span>{% endif %}
+        {% if pub.impact_factor != "" %}<span class="pub-tag">IF: {{ pub.impact_factor }}</span>{% endif %}
         {% if pub.quartile != "" %}<span class="pub-tag">{{ pub.quartile }}</span>{% endif %}
         {% if pub.url != "" %}<br>
         <a href="{{ pub.url }}" target="_blank" rel="noopener">{% if pub.url contains "doi.org/" %}DOI: {{ pub.url | split: "doi.org/" | last }}{% else %}View Paper{% endif %}</a>
         {% endif %}
       </li>
       {% endfor %}
-    </ul>
+    </ol>
   </div>
   </div>
 
@@ -246,7 +256,7 @@ nav_order: 87
   <h2 class="section-title">📚 Book Chapters</h2>
 
   <div class="paper-box">
-    <ul>
+    <ol>
       {% for pub in site.data.overleaf_cv.book_chapters %}
       <li>
         <strong class="deep-teal">{{ pub.title }}</strong><br>
@@ -257,7 +267,7 @@ nav_order: 87
         {% endif %}
       </li>
       {% endfor %}
-    </ul>
+    </ol>
   </div>
   </div>
 

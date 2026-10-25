@@ -71,12 +71,12 @@ Everything below comes from the Overleaf CV (_data/overleaf_cv.json, refreshed b
 
 - _Published Research Articles:_
 {%- for p in cv.journal_articles %}
-  - {{ p.title }} — _{{ p.venue }}_ ({{ p.year }}){% if p.url != "" %} [{% if p.url contains "doi.org/" %}DOI{% else %}Link{% endif %}]({{ p.url }}){% endif %}
+  1. {{ p.title }} — _{{ p.venue }}_ ({{ p.year }}){% if p.url != "" %} [{% if p.url contains "doi.org/" %}DOI{% else %}Link{% endif %}]({{ p.url }}){% endif %}
 {%- endfor %}
 {%- if cv.book_chapters.size > 0 %}
 - _Book Chapters:_
 {%- for p in cv.book_chapters %}
-  - {{ p.title }} — _{{ p.venue }}_ ({{ p.year }}){% if p.publisher != "" %}, {{ p.publisher }}{% endif %}
+  1. {{ p.title }} — _{{ p.venue }}_ ({{ p.year }}){% if p.publisher != "" %}, {{ p.publisher }}{% endif %}
 {%- endfor %}
 {%- endif %}
 {%- for g in cv.research_other %}
