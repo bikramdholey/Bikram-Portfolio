@@ -354,6 +354,12 @@ def pub_line(p):
     return " · ".join(b for b in bits if b)
 
 
+def link_html(url):
+    """Clickable reference line for the CV page: 'DOI: 10.x/…' or 'View paper'."""
+    label = "DOI: " + url.split("doi.org/", 1)[1] if "doi.org/" in url else "View paper ↗"
+    return f'<a href="{url}" target="_blank" rel="noopener noreferrer">{label}</a>'
+
+
 def to_cv_layout(d):
     """Build the list the al-folio CV layout (_layouts/cv.liquid) renders."""
     pr = d["profile"]
@@ -375,7 +381,7 @@ def to_cv_layout(d):
     if d["journal_articles"]:
         cv.append({"title": "Journal Articles", "type": "time_table", "contents": [
             {"title": p["title"], "institution": pub_line(p), "year": p["year"],
-             "description": [p["url"]] if p["url"] else []} for p in d["journal_articles"]]})
+             "description": [link_html(p["url"])] if p["url"] else []} for p in d["journal_articles"]]})
     if d["book_chapters"]:
         cv.append({"title": "Book Chapters", "type": "time_table", "contents": [
             {"title": p["title"], "institution": pub_line(p), "year": p["year"]} for p in d["book_chapters"]]})
