@@ -290,7 +290,12 @@
     {
       "title": "Supervision of MSc Projects",
       "items": [
-        "Brainware University · 2023 · Guided Marjita Goswami through all stages of her project on “Morse Theory”."
+        {
+          "org": "Brainware University",
+          "date": "2023",
+          "text": "Guided Marjita Goswami through all stages of her project on “Morse Theory”.",
+          "full": "Brainware University · 2023 · Guided Marjita Goswami through all stages of her project on “Morse Theory”."
+        }
       ]
     }
   ],
@@ -540,8 +545,10 @@
   ],
   "projects": [
     {
-      "text": "M.Sc. Project: “Morse Theory” - A tool to study topological structure of smooth manifold. · Satyabrota Kundu",
-      "date": "2020"
+      "title": "M.Sc. Project: “Morse Theory” - A tool to study topological structure of smooth manifold",
+      "supervisor": "Satyabrota Kundu",
+      "date": "2020",
+      "text": "M.Sc. Project: “Morse Theory” - A tool to study topological structure of smooth manifold. · Satyabrota Kundu"
     }
   ],
   "skills": [
@@ -603,6 +610,36 @@
       "value": "https://vidwan.inflibnet.ac.in/profile/361592"
     }
   ],
+  "references": [
+    {
+      "name": "Gopal Ch. Shit",
+      "position": "Professor",
+      "role": "PhD Supervisor",
+      "institution": "Jadavpur University",
+      "email": "gcshit@jadavpuruniversity.in"
+    },
+    {
+      "name": "Kshitish Ch. Mistri",
+      "position": "Assistant Professor",
+      "role": "PhD Co-supervisor",
+      "institution": "Ramakrishna Mission Vivekananda Centenary College",
+      "email": "kchmistri@gmail.com"
+    },
+    {
+      "name": "Amrita Das",
+      "position": "Assistant Professor",
+      "role": "Co-author",
+      "institution": "Polba Mahavidyalaya, University of Burdwan",
+      "email": "amritadas.ism@gmail.com"
+    },
+    {
+      "name": "Satyabrota Kundu",
+      "position": "Assistant Professor",
+      "role": "MSc Project Guide",
+      "institution": "Loreto College, University of Calcutta",
+      "email": "satyacaluniv@gmail.com"
+    }
+  ],
   "other_sections": [],
   "section_order": [
     "OBJECTIVE",
@@ -619,7 +656,8 @@
     "SKILLS",
     "INTERESTS",
     "EXTRACURRICULAR ACTIVITIES",
-    "WEB ADDRESSES"
+    "WEB ADDRESSES",
+    "REFERENCES"
   ],
   "source_commit": ""
 }

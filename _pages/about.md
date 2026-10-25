@@ -82,7 +82,7 @@ Everything below comes from the Overleaf CV (_data/overleaf_cv.json, refreshed b
 {%- for g in cv.research_other %}
 - _{{ g.title }}:_
 {%- for item in g.items %}
-  - {{ item }}
+  - {{ item.full }}
 {%- endfor %}
 {%- endfor %}
 

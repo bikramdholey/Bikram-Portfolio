@@ -240,13 +240,6 @@
     ]
   },
   {
-    "title": "Supervision of MSc Projects",
-    "type": "list",
-    "contents": [
-      "Brainware University · 2023 · Guided Marjita Goswami through all stages of her project on “Morse Theory”."
-    ]
-  },
-  {
     "title": "Conference & Seminar Presentations",
     "type": "time_table",
     "contents": [
@@ -505,9 +498,24 @@
   },
   {
     "title": "Projects",
-    "type": "list",
+    "type": "time_table",
     "contents": [
-      "M.Sc. Project: “Morse Theory” - A tool to study topological structure of smooth manifold. · Satyabrota Kundu (2020)"
+      {
+        "title": "M.Sc. Project: “Morse Theory”",
+        "year": "2020",
+        "institution": "Supervised by Satyabrota Kundu",
+        "description": [
+          "A tool to study topological structure of smooth manifold."
+        ]
+      },
+      {
+        "title": "Supervision of MSc Projects",
+        "institution": "Brainware University",
+        "year": "2023",
+        "description": [
+          "Guided Marjita Goswami through all stages of her project on “Morse Theory”."
+        ]
+      }
     ]
   },
   {
@@ -541,6 +549,44 @@
     "contents": [
       "National Service Scheme",
       "Sports"
+    ]
+  },
+  {
+    "title": "References",
+    "type": "time_table",
+    "contents": [
+      {
+        "title": "Gopal Ch. Shit",
+        "institution": "Jadavpur University",
+        "department": "Professor · PhD Supervisor",
+        "description": [
+          "Email: <a href=\"mailto:gcshit@jadavpuruniversity.in\">gcshit@jadavpuruniversity.in</a>"
+        ]
+      },
+      {
+        "title": "Kshitish Ch. Mistri",
+        "institution": "Ramakrishna Mission Vivekananda Centenary College",
+        "department": "Assistant Professor · PhD Co-supervisor",
+        "description": [
+          "Email: <a href=\"mailto:kchmistri@gmail.com\">kchmistri@gmail.com</a>"
+        ]
+      },
+      {
+        "title": "Amrita Das",
+        "institution": "Polba Mahavidyalaya, University of Burdwan",
+        "department": "Assistant Professor · Co-author",
+        "description": [
+          "Email: <a href=\"mailto:amritadas.ism@gmail.com\">amritadas.ism@gmail.com</a>"
+        ]
+      },
+      {
+        "title": "Satyabrota Kundu",
+        "institution": "Loreto College, University of Calcutta",
+        "department": "Assistant Professor · MSc Project Guide",
+        "description": [
+          "Email: <a href=\"mailto:satyacaluniv@gmail.com\">satyacaluniv@gmail.com</a>"
+        ]
+      }
     ]
   }
 ]
