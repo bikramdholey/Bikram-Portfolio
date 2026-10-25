@@ -1,7 +1,7 @@
 {
   "profile": {
     "name": "Bikram Dholey",
-    "label": "Research Scholer",
+    "label": "Research Scholar",
     "affiliation": "Jadavpur University, Kolkata",
     "email": "bikram.dholey.563412@gmail.com",
     "phone": "+91 9874795937"
@@ -575,7 +575,7 @@
   "web": [
     {
       "label": "Portfolio",
-      "value": "https://dainty-daffodil-d541e8.netlify.app/"
+      "value": "https://bikram-dholey.netlify.app/"
     },
     {
       "label": "Email",
@@ -659,5 +659,5 @@
     "WEB ADDRESSES",
     "REFERENCES"
   ],
-  "source_commit": "ec7944a2782a40f2a13901c53435e275c2ac334c"
+  "source_commit": "307b8518d3de11f7ef80c7acb5fc0f1a8e81b042"
 }
