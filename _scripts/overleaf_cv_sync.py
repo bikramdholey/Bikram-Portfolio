@@ -8,15 +8,15 @@ Writes:
     _data/overleaf_cv.json  structured data used by the About and Publications pages
     _data/cv.json           the same data in the shape the CV page layout expects
 
-Sections listed in EXCLUDED_SECTIONS (personal details, referees) are never
-written to the site, because those pages are public.
+Sections listed in EXCLUDED_SECTIONS (personal details) are never written to
+the site, because those pages are public. Referees are shown on the CV page only.
 """
 import json
 import os
 import re
 import sys
 
-EXCLUDED_SECTIONS = {"PERSONAL DETAILS", "REFERENCES"}
+EXCLUDED_SECTIONS = {"PERSONAL DETAILS"}
 INDEX_TAGS = {"SCIE", "SCI", "ESCI", "SCOPUS", "UGC CARE", "WOS"}
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -244,6 +244,37 @@ def parse_titled(raw, children):
             "date": trailing_date(raw) or "", "details": [clean(c["raw"]) for c in children]}
 
 
+def parse_reference(raw, children):
+    """'\\textbf{Name | Position | Role}' with institution and 'Email: x' bullets."""
+    head = [p.strip() for p in clean(first_arg("textbf", raw) or raw).split("|")]
+    ref = {"name": head[0], "position": head[1] if len(head) > 1 else "",
+           "role": " | ".join(head[2:]), "institution": "", "email": ""}
+    for c in children:
+        text = clean(c["raw"])
+        m = re.search(r"[\w.+-]+@[\w-]+\.[\w.]+", text)
+        if m:
+            ref["email"] = m.group(0)
+        elif not ref["institution"]:
+            ref["institution"] = text
+    return ref
+
+
+def split_parts(text):
+    """'Org | 2023 | Did something' -> {"org", "date", "text"} (year pulled out wherever it is)."""
+    parts = [p.strip() for p in text.split("|") if p.strip()]
+    date = next((p for p in parts if re.fullmatch(r"(19|20)\d\d(\s*[–-]\s*\S+)?", p)), "")
+    rest = [p for p in parts if p != date]
+    return {"org": rest[0] if len(rest) > 1 else "", "date": date, "text": rest[-1] if rest else "",
+            "full": text}
+
+
+def parse_project(raw):
+    head = clean(first_arg("textbf", raw) or raw)
+    parts = [p.strip() for p in head.split("|")]
+    return {"title": parts[0].rstrip(". "), "supervisor": " | ".join(parts[1:]),
+            "date": trailing_date(raw) or "", "text": head}
+
+
 def parse_course(raw):
     head = clean(first_arg("textbf", raw) or raw)
     parts = [p.strip() for p in head.split("|")]
@@ -272,7 +303,7 @@ def convert(tex):
             "journal_articles": [], "book_chapters": [], "research_other": [],
             "conferences": [], "seminars": [], "awards": [], "work": [], "plans": [],
             "research_interests": [], "courses": [], "projects": [], "skills": [],
-            "interests": [], "extracurricular": [], "web": [], "other_sections": [],
+            "interests": [], "extracurricular": [], "web": [], "references": [], "other_sections": [],
             "section_order": []}
 
     for title, body in sections:
@@ -293,7 +324,7 @@ def convert(tex):
                     data["book_chapters"] = [parse_pub(c["raw"]) for c in group["children"]]
                 else:
                     data["research_other"].append({"title": clean(group["raw"]),
-                                                   "items": [clean(c["raw"]) for c in group["children"]]})
+                                                   "items": [split_parts(clean(c["raw"])) for c in group["children"]]})
         elif title.startswith("CONFERENCE"):
             data["conferences"] = [parse_event(i["raw"]) for i in items]
         elif title.startswith("SEMINAR"):
@@ -310,7 +341,9 @@ def convert(tex):
         elif "COURSE" in title or "TRAINING" in title:
             data["courses"] = [parse_course(i["raw"]) for i in items]
         elif title.startswith("PROJECT"):
-            data["projects"] = [{"text": clean(i["raw"]), "date": trailing_date(i["raw"]) or ""} for i in items]
+            data["projects"] = [parse_project(i["raw"]) for i in items]
+        elif title.startswith("REFERENCE"):
+            data["references"] = [parse_reference(i["raw"], i["children"]) for i in items]
         elif title == "SKILLS":
             data["skills"] = [parse_labeled(i["raw"]) for i in items]
         elif title == "INTERESTS":
@@ -385,8 +418,6 @@ def to_cv_layout(d):
     if d["book_chapters"]:
         cv.append({"title": "Book Chapters", "type": "time_table", "contents": [
             {"title": p["title"], "institution": pub_line(p), "year": p["year"]} for p in d["book_chapters"]]})
-    for g in d["research_other"]:
-        cv.append({"title": g["title"], "type": "list", "contents": g["items"]})
     if d["conferences"]:
         cv.append({"title": "Conference & Seminar Presentations", "type": "time_table", "contents": [
             {"title": c["title"], "institution": c["event"], "year": c["date"],
@@ -405,9 +436,18 @@ def to_cv_layout(d):
     if d["courses"]:
         cv.append({"title": "Relevant Courses / Trainings", "type": "list", "contents": [
             " | ".join(x for x in (c["title"], c["kind"], c["organizer"]) if x) for c in d["courses"]]})
-    if d["projects"]:
-        cv.append({"title": "Projects", "type": "list", "contents": [
-            p["text"] + (f" ({p['date']})" if p["date"] else "") for p in d["projects"]]})
+    projects = []
+    for p in d["projects"]:
+        title, _, about = p["title"].partition(" - ")  # "M.Sc. Project: X - what it is about"
+        projects.append({"title": title.strip(), "year": p["date"],
+                         "institution": "Supervised by " + p["supervisor"] if p["supervisor"] else "",
+                         "description": [about.strip().rstrip(".") + "."] if about.strip() else []})
+    for g in d["research_other"]:
+        for item in g["items"]:
+            projects.append({"title": g["title"], "institution": item["org"], "year": item["date"],
+                             "description": [item["text"]]})
+    if projects:
+        cv.append({"title": "Projects", "type": "time_table", "contents": projects})
     if d["skills"]:
         cv.append({"title": "Skills", "type": "map", "contents": [
             {"name": s["label"], "value": s["value"]} for s in d["skills"]]})
@@ -417,6 +457,12 @@ def to_cv_layout(d):
         cv.append({"title": "Extracurricular Activities", "type": "list", "contents": d["extracurricular"]})
     for s in d["other_sections"]:
         cv.append({"title": s["title"], "type": "list", "contents": [i["text"] for i in s["items"]]})
+    if d["references"]:
+        cv.append({"title": "References", "type": "time_table", "contents": [
+            {"title": r["name"], "institution": r["institution"],
+             "department": " · ".join(x for x in (r["position"], r["role"]) if x),
+             "description": [f'Email: <a href="mailto:{r["email"]}">{r["email"]}</a>'] if r["email"] else []}
+            for r in d["references"]]})
     return cv
 
 
