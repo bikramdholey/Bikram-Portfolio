@@ -9,14 +9,7 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-projects",
-          title: "Projects",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/projects/";
-          },
-        },{id: "nav-contact",
+  },{id: "nav-contact",
           title: "Contact",
           description: "Contact details of Bikram Dholey — Research Scholar in Mathematics, Jadavpur University.",
           section: "Navigation",
@@ -44,12 +37,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/memories/";
           },
-        },{id: "nav-publications",
-          title: "Publications",
-          description: "Published research papers and featured visuals.",
+        },{id: "nav-research",
+          title: "Research",
+          description: "Research specialization, publications and projects.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/publications/";
+            window.location.href = "/research/";
           },
         },{id: "nav-admin",
           title: "Admin",
