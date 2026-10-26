@@ -1,0 +1,143 @@
+# Sveltia CMS configuration for the Admin panel at /admin/.
+# Docs: https://sveltiacms.app/en/docs
+#
+# Sign-in: "Sign In with GitHub" (via the Netlify site's OAuth provider) or
+# "Sign In with Token" (a GitHub fine-grained token with Contents: read & write
+# on this repository). Every save is a commit to main, and the site republishes
+# itself a few minutes later.
+#
+# Publications, CV, education, experience, awards… come from the Overleaf CV
+# (.github/workflows/sync-cv-from-overleaf.yml); edit those in Overleaf.
+
+backend:
+  name: github
+  repo: bikramdholey/bikramdholey.github.io
+  branch: main
+  # the OAuth provider lives on the Netlify site, while the CMS is also served
+  # from bikramdholey.github.io
+  site_domain: bikram-dholey.netlify.app
+
+site_url: https://bikramdholey.github.io
+logo_url: /assets/img/prof_pic.jpg.webp
+display_url: https://bikramdholey.github.io
+
+# Photo library: all site images. Memory albums are the folders inside
+# memories/ — open one to add or delete photos, or create a new folder for a
+# new album.
+media_folder: assets/img
+public_folder: /assets/img
+
+collections:
+  - name: settings
+    label: Site text & settings
+    icon: tune
+    files:
+      - name: site_text
+        label: Site text
+        file: _data/site_text.yml
+        fields:
+          - name: about_intro
+            label: About Me introduction (home page)
+            widget: text
+          - name: publications_intro
+            label: Research page — subtitle
+            widget: string
+          - name: quote
+            label: Quote at the bottom of the Research page
+            widget: text
+          - name: quote_signature
+            label: Quote signature lines
+            widget: list
+            field: { name: line, label: Line, widget: string }
+
+      - name: memory_albums
+        label: Memory album titles
+        file: _data/memory_albums.yml
+        fields:
+          - name: albums
+            label: Albums
+            label_singular: Album
+            widget: list
+            root: true
+            summary: "{{folder}} → {{title}}"
+            fields:
+              - { name: folder, label: Folder name (inside memories/), widget: string }
+              - { name: title, label: Title shown on the site, widget: string }
+
+      - name: socials
+        label: Social / research profile links
+        file: _data/socials.yml
+        fields:
+          - name: profiles
+            label: Profiles
+            label_singular: Profile
+            widget: list
+            root: true
+            summary: "{{name}}"
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: url, label: Link, widget: string }
+              - { name: icon, label: Icon class (Font Awesome / Academicons), widget: string }
+
+      - name: institution_links
+        label: Institution website links
+        file: _data/institution_links.yml
+        fields:
+          - name: institutions
+            label: Institutions
+            label_singular: Institution
+            widget: list
+            root: true
+            summary: "{{name}}"
+            fields:
+              - { name: name, label: Institution name (exactly as in the CV), widget: string }
+              - { name: url, label: Website, widget: string }
+
+  - name: pages
+    label: Pages
+    icon: description
+    files:
+      - name: teaching
+        label: Teaching page
+        file: _pages/teaching.md
+        fields:
+          - { name: banner, widget: hidden, default: teaching }
+          - { name: layout, widget: hidden, default: page }
+          - { name: permalink, widget: hidden, default: /teaching/ }
+          - { name: title, label: Title, widget: string }
+          - { name: description, label: Description, widget: string }
+          - { name: nav, widget: hidden, default: true }
+          - { name: nav_order, widget: hidden, default: 6 }
+          - { name: body, label: Page content (Markdown / HTML), widget: text }
+
+      - name: contact
+        label: Contact page
+        file: _pages/contact.md
+        fields:
+          - { name: banner, widget: hidden, default: contact }
+          - { name: layout, widget: hidden, default: page }
+          - { name: title, label: Title, widget: string }
+          - { name: permalink, widget: hidden, default: /contact/ }
+          - { name: description, label: Description, widget: string }
+          - { name: nav, widget: hidden, default: true }
+          - { name: nav_order, widget: hidden, default: 4 }
+          - { name: body, label: Page content (Markdown / HTML), widget: text }
+
+  - name: projects
+    label: Projects (Research page)
+    label_singular: Project
+    icon: category
+    folder: _projects
+    create: true
+    delete: true
+    extension: md
+    slug: "{{title}}"
+    summary: "{{title}}"
+    fields:
+      - { name: layout, widget: hidden, default: page }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Short description, widget: string }
+      - { name: category, label: Category, widget: string, default: work }
+      - { name: importance, label: Order (1 = first), widget: number, value_type: int, default: 1 }
+      - { name: img, label: Card image, widget: image, required: false }
+      - { name: body, label: Project page content (Markdown / HTML), widget: text }

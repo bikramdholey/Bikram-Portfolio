@@ -44,13 +44,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/research/";
           },
-        },{id: "nav-admin",
-          title: "Admin",
-          description: "Edit the website — sign in with the site owner&#39;s GitHub account.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/admin/";
-          },
         },{id: "projects-morse-theory",
           title: 'Morse Theory',
           description: "A tool to study the topological structure of smooth manifolds.",
