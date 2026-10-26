@@ -20,7 +20,7 @@ on:
         type: boolean
         default: false
       payload:
-        description: Sent by the Admin panel (Pages CMS) button; not used
+        description: Optional value from automation tools; not used
         type: string
         required: false
 
