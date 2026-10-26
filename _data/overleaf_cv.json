@@ -575,7 +575,7 @@
   "web": [
     {
       "label": "Portfolio",
-      "value": "https://bikram-dholey.netlify.app/"
+      "value": "https://bikramdholey.github.io/"
     },
     {
       "label": "Email",
@@ -659,5 +659,5 @@
     "WEB ADDRESSES",
     "REFERENCES"
   ],
-  "source_commit": "307b8518d3de11f7ef80c7acb5fc0f1a8e81b042"
+  "source_commit": "72bab402a62d0ef38bfce3f9c8a564325b094229"
 }
