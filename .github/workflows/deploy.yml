@@ -1,8 +1,8 @@
 ﻿name: Deploy site
 
-# Builds the site and publishes it to:
-#   - Netlify (site root), when the NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID secrets are set
-#   - GitHub Pages at https://bikramdholey.github.io/Bikram-Portfolio/ (gh-pages branch)
+# Builds the site once and publishes it to:
+#   - GitHub Pages at https://bikramdholey.github.io/ (gh-pages branch; main address)
+#   - Netlify (bikram-dholey.netlify.app), when the NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID secrets are set
 
 on:
   push:
@@ -47,8 +47,11 @@ jobs:
           pip install --quiet Pillow pillow-heif
           python3 _scripts/optimize_memory_photos.py
 
-      - name: Build for Netlify 🔧
-        run: JEKYLL_ENV=production bundle exec jekyll build
+      - name: Build site 🔧
+        run: |
+          JEKYLL_ENV=production bundle exec jekyll build
+          # serve the built site as-is; stops GitHub Pages running Jekyll on it again
+          touch _site/.nojekyll
 
       - name: Deploy to Netlify 🌐
         env:
@@ -62,16 +65,8 @@ jobs:
           npx --yes netlify-cli@17 deploy --prod --dir=_site --site "$NETLIFY_SITE_ID" \
             --message "Deploy ${GITHUB_SHA::7}"
 
-      - name: Build for GitHub Pages 🔧
-        run: |
-          printf 'url: "https://bikramdholey.github.io"\nbaseurl: /Bikram-Portfolio\n' > "$RUNNER_TEMP/_config.pages.yml"
-          JEKYLL_ENV=production bundle exec jekyll build \
-            --config "_config.yml,$RUNNER_TEMP/_config.pages.yml" --destination _site_pages
-          # serve the built site as-is; stops GitHub Pages running Jekyll on it again
-          touch _site_pages/.nojekyll
-
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: _site_pages
+          folder: _site

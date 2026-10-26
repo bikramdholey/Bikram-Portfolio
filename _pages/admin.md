@@ -9,7 +9,7 @@ nav_order: 99
 sitemap: false
 ---
 
-{%- assign repo = "bikramdholey/Bikram-Portfolio" -%}
+{%- assign repo = "bikramdholey/bikramdholey.github.io" -%}
 {%- assign cms = "https://app.pagescms.org/" | append: repo | append: "/main" -%}
 
 <div class="admin-login">
