@@ -635,6 +635,7 @@
     ".profile-btn",
     ".memory-card",
     ".portfolio-page .cv .card",
+    ".research-projects .card",
     ".admin-login",
   ].join(",");
 

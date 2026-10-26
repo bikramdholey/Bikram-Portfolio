@@ -52,10 +52,10 @@ sitemap: false
 ## ✏️ Text, links & pages
 
 <ul>
-  <li><a href="{{ cms }}/content/site_text" target="_blank" rel="noopener">Site text</a> — the About Me introduction, and the Publications page subtitle and quote.</li>
+  <li><a href="{{ cms }}/content/site_text" target="_blank" rel="noopener">Site text</a> — the About Me introduction, and the Research page subtitle and quote.</li>
   <li><a href="{{ cms }}/content/socials" target="_blank" rel="noopener">Social / research profile links</a></li>
   <li><a href="{{ cms }}/content/institution_links" target="_blank" rel="noopener">Institution website links</a> (used on the About page)</li>
-  <li><a href="{{ cms }}/content/teaching" target="_blank" rel="noopener">Teaching page</a> · <a href="{{ cms }}/content/contact" target="_blank" rel="noopener">Contact page</a> · <a href="{{ cms }}/content/projects" target="_blank" rel="noopener">Projects</a></li>
+  <li><a href="{{ cms }}/content/teaching" target="_blank" rel="noopener">Teaching page</a> · <a href="{{ cms }}/content/contact" target="_blank" rel="noopener">Contact page</a> · <a href="{{ cms }}/content/projects" target="_blank" rel="noopener">Projects</a> (on the Research page)</li>
   <li><a href="{{ cms }}/media/images" target="_blank" rel="noopener">Other site images</a></li>
 </ul>
 

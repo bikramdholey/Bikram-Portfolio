@@ -20,7 +20,7 @@ media:
 
 content:
   - name: site_text
-    label: Site text (About intro, Publications page)
+    label: Site text (About intro, Research page)
     type: file
     path: _data/site_text.yml
     format: yaml
@@ -29,10 +29,10 @@ content:
         label: About Me introduction (home page)
         type: text
       - name: publications_intro
-        label: Publications page — subtitle
+        label: Research page — subtitle
         type: string
       - name: quote
-        label: Quote at the bottom of the Publications page
+        label: Quote at the bottom of the Research page
         type: text
       - name: quote_signature
         label: Quote signature lines
@@ -140,7 +140,7 @@ content:
         type: text
 
   - name: projects
-    label: Projects
+    label: Projects (shown on the Research page)
     type: collection
     path: _projects
     format: yaml-frontmatter

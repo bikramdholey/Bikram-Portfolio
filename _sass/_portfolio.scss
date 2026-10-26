@@ -620,3 +620,39 @@ a.profile-btn {
 .portfolio-page .cv td:first-child {
   word-break: normal; // labels ("Affiliation") stay whole; only values wrap
 }
+
+// Project cards in the Research page's Projects subsection
+.research-projects {
+  margin-bottom: 1.5rem;
+
+  .card {
+    background-color: var(--tint, #e0f2f1);
+    border: 0;
+    border-left: 5px solid var(--accent, #00695c);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(0, 105, 92, 0.22);
+    }
+
+    .card-img-top {
+      background-color: #fff;
+    }
+
+    .card-title {
+      color: var(--accent-strong, #004d40);
+      font-weight: 700;
+    }
+
+    .card-text {
+      color: var(--global-text-color);
+    }
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}

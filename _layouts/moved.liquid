@@ -1,0 +1,21 @@
+{%- comment -%}
+  A page that has moved: sends visitors (and old bookmarks) straight to
+  `moved_to`, and tells search engines where the page lives now.
+{%- endcomment -%}
+{%- assign target = page.moved_to | relative_url -%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Moved to {{ page.moved_to }}</title>
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="{{ page.moved_to | absolute_url }}">
+    <meta http-equiv="refresh" content="0; url={{ target }}">
+    <script>
+      window.location.replace("{{ target }}");
+    </script>
+  </head>
+  <body>
+    <p>This page has moved to <a href="{{ target }}">{{ page.moved_to | absolute_url }}</a>.</p>
+  </body>
+</html>
